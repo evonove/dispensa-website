@@ -5,10 +5,25 @@ Dispensa 63 website
 Getting started
 ---------------
 
-The service may be wrapped using NewRelic. In this case, launch the application server with the
-following command:
+In development mode, all backend services are managed through ``docker-compose``; simply run::
 
-.. code-block:: bash
+    $ docker-compose up
+
+Once the database is up and running, launch the following commands::
+
+    $ python manage.py migrate
+    $ python manage.py createsuperuser
+    $ python manage.py runserver
+
+Notes on docker-compose
+~~~~~~~~~~~~~~~~~~~~~~~
+
+``docker-compose`` persists previous data until the containers are removed through the ``docker-compose rm`` command.
+
+Launching the production
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To wrap the application with NewRelic, simply::
 
     $ newrelic-admin run-program uwsgi
 
