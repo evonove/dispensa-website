@@ -40,6 +40,21 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'wagtail.wagtailforms',
+    'wagtail.wagtailredirects',
+    'wagtail.wagtailembeds',
+    'wagtail.wagtailsites',
+    'wagtail.wagtailusers',
+    'wagtail.wagtailsnippets',
+    'wagtail.wagtaildocs',
+    'wagtail.wagtailimages',
+    'wagtail.wagtailsearch',
+    'wagtail.wagtailadmin',
+    'wagtail.wagtailcore',
+
+    'modelcluster',
+    'taggit',
 )
 
 MIDDLEWARE_CLASSES = [
@@ -50,6 +65,9 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'wagtail.wagtailcore.middleware.SiteMiddleware',
+    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'dispensa.urls'
@@ -57,7 +75,9 @@ ROOT_URLCONF = 'dispensa.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,6 +135,10 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', EMAIL_BACKEND_DEFAULT)
 # logging
 LOGSTASH_HOST = env('LOGSTASH_HOST', '127.0.0.1')
 LOGSTASH_PORT = env('LOGSTASH_PORT', 5000)
+
+# WagTail
+WAGTAIL_SITE_NAME = 'Dispensa 63'
+TAGGIT_CASE_INSENSITIVE = True
 
 LOGGING = {
     'version': 1,
