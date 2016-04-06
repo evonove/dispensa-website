@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'modelcluster',
     'taggit',
 
+    'wheelie',
     'home',
 )
 
