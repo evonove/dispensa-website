@@ -1,0 +1,8 @@
+[run]
+source = django-dispensa
+omit =
+    */migrations/*
+    */tests/*
+    django-dispensa/manage.py
+    django-dispensa/dispensa/wsgi.py
+    django-dispensa/dispensa/settings/production.py
