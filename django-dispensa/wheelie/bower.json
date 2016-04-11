@@ -1,0 +1,24 @@
+{
+  "name": "Dispensa 63",
+  "homepage": "https://github.com/evonove/dispensa-website",
+  "authors": [
+    "Alessio Rapini <alessio.rapini@evonove.it>",
+    "Emanuele Palazzetti <emanuele.palazzetti@evonove.it>"
+  ],
+  "description": "Dispensa 63 website and blog",
+  "main": "",
+  "moduleType": [],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "~4.0.0"
+  }
+}
