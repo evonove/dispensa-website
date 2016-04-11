@@ -1,0 +1,12 @@
+.splash {
+  height: 100vh;
+  width: 100vw;
+
+  .webp & {
+    background: url("../images/splash.webp") no-repeat 100% 65% / cover;
+  }
+
+  .nowebp & {
+    background: url("../images/splash.jpg") no-repeat 100% 65% / cover;
+  }
+}
