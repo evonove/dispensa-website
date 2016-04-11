@@ -15,8 +15,7 @@ var vendors = [
 ];
 
 var scripts = [
-    // add here your JavaScript files
-    // with a base PATH of `client/js/` folder
+    'compatibility/modernizr-custom.js'
 ];
 
 wheelie.update('uglify', {
