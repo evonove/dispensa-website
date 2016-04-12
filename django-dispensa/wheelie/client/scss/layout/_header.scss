@@ -1,0 +1,67 @@
+.header {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.header-logo {
+  background: url("../svg/box.svg") no-repeat center / contain;
+  left: 50%;
+  max-width: 400px;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  z-index: 200;
+}
+
+.header-logo-icon {
+  margin: auto;
+  width: 100px;
+}
+
+.header-logo-dispensa63 {
+  margin: 15px auto 0;
+  width: 285px;
+}
+
+.header-navigation {
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  bottom: 0;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.header-navigation-blur {
+  height: 250px;
+  width: 100%;
+  margin: -20px auto;
+  z-index: 100;
+  position: relative;
+  filter: blur(10px);
+  overflow: hidden;
+
+  .webp & {
+    background: url("../images/splash.webp") center / cover no-repeat fixed;
+  }
+
+  .nowebp & {
+    background: url("../images/splash.jpg") center / cover no-repeat fixed;
+  }
+}
+
+.header-navigation-blur:after {
+  background: rgba(0, 0, 0, .2);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
