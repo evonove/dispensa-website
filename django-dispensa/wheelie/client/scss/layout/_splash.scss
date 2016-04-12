@@ -10,3 +10,24 @@
     background: url("../images/splash.jpg") no-repeat 100% 65% / cover;
   }
 }
+
+.splash-logo {
+  background: url("../svg/box.svg") no-repeat center / contain;
+  left: 50%;
+  max-width: 400px;
+  padding: 50px;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.splash-logo-icon {
+  margin: auto;
+  width: 100px;
+}
+
+.splash-logo-dispensa63 {
+  margin: 15px auto 0;
+  width: 285px;
+}

@@ -4,7 +4,16 @@
 
 {% block content %}
     <header class="header"></header>
-    <section class="splash"></section>
+    <section class="splash">
+        <div class="splash-logo">
+            <div class="splash-logo-icon">
+                <img class="splash-logo-icon-svg js-inject-svg" src="{% static 'svg/logo-carrot.svg' %}">
+            </div>
+            <div class="splash-logo-dispensa63">
+                <img class="splash-logo-dispensa63-svg js-inject-svg" src="{% static 'svg/logo.svg' %}">
+            </div>
+        </div>
+    </section>
     <section class="about"></section>
     <section class="menu"></section>
     <section class="special-events"></section>
