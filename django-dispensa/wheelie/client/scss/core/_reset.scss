@@ -1,6 +1,14 @@
 // Normalize
 @import "../../../vendors/normalize-css/normalize";
 
+a,
+a:hover,
+a:active,
+a:visited {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 ul {
   margin: 0;
   padding: 0;
