@@ -1,0 +1,11 @@
+.about {
+  background: darken($mine, 7%) url("../images/icons-bg.png");
+  padding: 3em 25%;
+}
+
+.about-bio {
+  color: $white;
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+}
