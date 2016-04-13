@@ -2,7 +2,7 @@
   height: 100vh;
   position: relative;
   width: 100vw;
-  z-index: -3;
+  z-index: $z-splash;
 
   .webp & {
     background: url("../images/splash.webp") center / cover no-repeat fixed;

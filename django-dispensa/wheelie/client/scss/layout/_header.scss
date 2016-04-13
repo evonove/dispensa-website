@@ -2,7 +2,7 @@
   height: 100vh;
   position: absolute;
   width: 100%;
-  z-index: 0;
+  z-index: $z-header;
 }
 
 .header-logo {
@@ -14,8 +14,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-
-  z-index: 200;
+  z-index: $z-logo;
 }
 
 .header-logo-icon {
@@ -44,7 +43,7 @@
   height: 100%;
   position: absolute;
   width: 100%;
-  z-index: 300;
+  z-index: $z-nav;
 }
 
 .header-navigation-nav ul {
@@ -55,20 +54,20 @@
 }
 
 .header-navigation-nav li {
-  color: white;
+  color: $white;
   display: inline-block;
   font: 24px Lato;
   text-transform: uppercase;
 }
 
 .header-navigation-blur {
-  height: 250px;
-  width: 100%;
-  margin: -20px auto;
-  z-index: 100;
-  position: relative;
   filter: blur(10px);
+  height: 250px;
+  margin: -20px auto;
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 100;
 
   .webp & {
     background: url("../images/splash.webp") center / cover no-repeat fixed;
