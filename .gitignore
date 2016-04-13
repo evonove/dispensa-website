@@ -60,3 +60,6 @@ target/
 
 # IDE
 .idea/
+
+# OSX
+.DS_Store
