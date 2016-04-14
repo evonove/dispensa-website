@@ -1,0 +1,25 @@
+.contacts {
+  background: darken($mine, 7%) url("../images/pattern.png");
+  color: $white;
+  padding: 1.618em 30%;
+  text-align: center;
+}
+
+.contacts > * + *  {
+  margin-top: 0.618em;
+}
+
+.contacts-opening,
+.contacts-touch,
+.contacts-social {
+  & > * + * {
+    margin-top: 0.236em;
+  }
+}
+
+.contacts-opening-details,
+.contacts-touch-details,
+.contacts-social-details {
+  display: flex;
+  justify-content: space-around;
+}
