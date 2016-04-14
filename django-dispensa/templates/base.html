@@ -45,7 +45,7 @@
         <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
 
         {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
+            <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
         {% endblock %}
 
         {% block extra_analytics %}

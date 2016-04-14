@@ -1,25 +1,33 @@
 .contacts {
   background: darken($mine, 7%) url("../images/pattern.png");
   color: $white;
-  padding: 1.618em 30%;
   text-align: center;
 }
 
-.contacts > * + *  {
+.contacts-container {
+  padding: 1.618em 30%;
+
+  & > * + * {
   margin-top: 0.618em;
+  }
 }
 
-.contacts-opening,
-.contacts-touch,
-.contacts-social {
+.contacts-container-opening,
+.contacts-container-touch,
+.contacts-container-social {
   & > * + * {
     margin-top: 0.236em;
   }
 }
 
-.contacts-opening-details,
-.contacts-touch-details,
-.contacts-social-details {
+.contacts-container-opening-details,
+.contacts-container-touch-details,
+.contacts-container-social-details {
   display: flex;
   justify-content: space-around;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
 }
