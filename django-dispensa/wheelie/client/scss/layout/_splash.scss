@@ -8,7 +8,7 @@
     background: url("/static/images/splash.webp") center / cover no-repeat fixed;
   }
 
-  .nowebp & {
+  .no-webp & {
     background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
   }
 }
