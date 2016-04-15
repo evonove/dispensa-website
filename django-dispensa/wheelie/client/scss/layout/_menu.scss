@@ -7,7 +7,8 @@
   text-align: right;
 }
 
-.menu-ingredients {
+.menu-ingredients,
+.menu-preparation {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -15,6 +16,7 @@
   width: 75%;
 }
 
-.menu-ingredients-description {
+.menu-ingredients-description,
+.menu-preparation-description {
   width: 25%;
 }
