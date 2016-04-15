@@ -1,0 +1,20 @@
+.menu {
+  padding: 3em 0;
+}
+
+.menu-heading {
+  margin-right: 15%;
+  text-align: right;
+}
+
+.menu-ingredients {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5em auto 0;
+  width: 75%;
+}
+
+.menu-ingredients-description {
+  width: 25%;
+}
