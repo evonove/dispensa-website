@@ -5,10 +5,10 @@
   z-index: $z-splash;
 
   .webp & {
-    background: url("../images/splash.webp") center / cover no-repeat fixed;
+    background: url("/static/images/splash.webp") center / cover no-repeat fixed;
   }
 
   .nowebp & {
-    background: url("../images/splash.jpg") center / cover no-repeat fixed;
+    background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
   }
 }

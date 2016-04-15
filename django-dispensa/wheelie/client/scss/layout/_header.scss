@@ -6,7 +6,7 @@
 }
 
 .header-logo {
-  background: url("../svg/box.svg") no-repeat center / contain;
+  background: url("/static/svg/box.svg") no-repeat center / contain;
   left: 50%;
   max-width: 400px;
   padding: 50px;
@@ -70,11 +70,11 @@
   z-index: 100;
 
   .webp & {
-    background: url("../images/splash.webp") center / cover no-repeat fixed;
+    background: url("/static/images/splash.webp") center / cover no-repeat fixed;
   }
 
   .nowebp & {
-    background: url("../images/splash.jpg") center / cover no-repeat fixed;
+    background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
   }
 }
 
