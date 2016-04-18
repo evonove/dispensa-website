@@ -26,7 +26,7 @@
 }
 
 .menu-courses {
-  height: 2000px;
+  height: 3500px;
   margin: 1.5em auto 0;
   position: relative;
   width: 100%;
@@ -50,22 +50,31 @@
   width: 100%;
 }
 
-.menu-courses-canvas-breakfast {
+.menu-courses-canvas-breakfast,
+.menu-courses-canvas-lunch,
+.menu-courses-canvas-aperitif {
   margin: auto;
   position: relative;
-  top: 300px;
   width: 300px;
 }
 
-.menu-courses-canvas-breakfast-doodle {
+.menu-courses-canvas-breakfast-doodle,
+.menu-courses-canvas-lunch-doodle,
+.menu-courses-canvas-aperitif-doodle {
   width: 100%;
 }
 
-.menu-courses-canvas-breakfast-text {
+.menu-courses-canvas-breakfast-text,
+.menu-courses-canvas-lunch-text,
+.menu-courses-canvas-aperitif-text {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.menu-courses-canvas-breakfast {
+  top: 300px;
 }
 
 .menu-courses-canvas-the {
@@ -107,4 +116,42 @@
 .menu-courses-canvas-yogurt {
   left: calc(50% + 200px);
   top: 700px;
+}
+
+.menu-courses-canvas-lunch {
+  top: 1300px;
+}
+
+.menu-courses-canvas-salad {
+  left: calc(50% - 900px);
+  top: 1550px;
+  width: 490px;
+}
+
+.menu-courses-canvas-coffee {
+  left: calc(50% - 750px);
+  top: 2100px;
+  width: 500px;
+}
+
+.menu-courses-canvas-sandwich {
+  left: calc(50% + 275px);
+  top: 1500px;
+  width: 680px;
+}
+
+.menu-courses-canvas-aperitif {
+  top: 2100px;
+}
+
+.menu-courses-canvas-croutons {
+  left: calc(50% - 1300px);
+  top: 2550px;
+  width: 1000px;
+}
+
+.menu-courses-canvas-cocktail {
+  left: calc(50% + 425px);
+  top: 2700px;
+  width: 600px;
 }
