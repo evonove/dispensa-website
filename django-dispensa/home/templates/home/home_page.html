@@ -39,7 +39,9 @@
     <section class="menu">
         <h1 class="menu-heading">Perché i nostri piatti sono buoni e genuini?</h1>
         <div class="menu-ingredients">
-            <p class="menu-ingredients-description">Utilizziamo soltanto ingredienti freschi e a filiera corta.</p>
+            <p class="menu-ingredients-description">
+                Perché utilizziamo soltanto ingredienti freschi e a filiera corta.
+            </p>
             <figure class="menu-ingredients-figure">
                 <img src="{% static 'images/placeholder.png' %}">
             </figure>
@@ -48,9 +50,41 @@
             <figure class="menu-ingredients-figure">
                 <img src="{% static 'images/placeholder.png' %}">
             </figure>
-            <p class="menu-preparation-description">Prepariamo tutto a mano, ogni giorno, con un pizzico di creatività.</p>
+            <p class="menu-preparation-description">
+                Perché prepariamo tutto a mano, ogni giorno, con un pizzico di creatività.
+            </p>
         </div>
-        <div class="menu-courses"></div>
+        <div class="menu-courses">
+            <p class="menu-courses-description center text-center">
+                Così da offrirvi un menu sempre buono e genuino!
+            </p>
+            <div class="menu-courses-canvas">
+                <div class="menu-courses-canvas-breakfast">
+                    <img class="menu-courses-canvas-breakfast-doodle js-inject-svg" src="{% static 'svg/doodle.svg' %}">
+                    <p class="menu-courses-canvas-breakfast-text">Colazione</p>
+                </div>
+                <figure class="menu-courses-canvas-the">
+                    <img src="{% static 'images/the.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/the.png' %}' ">
+                </figure>
+                <figure class="menu-courses-canvas-danish">
+                    <img src="{% static 'images/danish-swirl.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/danish-swirl.png' %}' ">
+                </figure>
+                <figure class="menu-courses-canvas-croissant-first">
+                    <img src="{% static 'images/croissant.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/croissant.png' %}' ">
+                </figure>
+                <figure class="menu-courses-canvas-cupcake">
+                    <img src="{% static 'images/cupcake.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/cupcake.png' %}' ">
+                </figure>
+                <figure class="menu-courses-canvas-yogurt">
+                    <img src="{% static 'images/yogurt.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/yogurt.png' %}' ">
+                </figure>
+                <figure class="menu-courses-canvas-croissant-second">
+                    <img src="{% static 'images/croissant.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/croissant.png' %}' ">
+                </figure>
+            </div>
+            <div class="menu-courses-lunch"></div>
+            <div class="menu-courses-aperitif"></div>
+        </div>
     </section>
 
     <section class="special-events">

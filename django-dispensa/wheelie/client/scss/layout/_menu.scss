@@ -1,5 +1,7 @@
 .menu {
+  overflow: hidden;
   padding: 3em 0;
+  width: 100%;
 }
 
 .menu-heading {
@@ -17,6 +19,92 @@
 }
 
 .menu-ingredients-description,
-.menu-preparation-description {
+.menu-preparation-description,
+.menu-courses-description {
+  font: 1.25em Journal, serif;
   width: 25%;
+}
+
+.menu-courses {
+  height: 2000px;
+  margin: 1.5em auto 0;
+  position: relative;
+  width: 100%;
+
+  figure {
+    position: absolute;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    font: 1.25em Journal, serif;
+  }
+}
+
+.menu-courses-canvas {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.menu-courses-canvas-breakfast {
+  margin: auto;
+  position: relative;
+  top: 300px;
+  width: 300px;
+}
+
+.menu-courses-canvas-breakfast-doodle {
+  width: 100%;
+}
+
+.menu-courses-canvas-breakfast-text {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-courses-canvas-the {
+  left: calc(50% - 975px);
+  width: 750px;
+  top: 75px;
+}
+
+.menu-courses-canvas-danish {
+  left: calc(50% + 375px);
+  top: 100px;
+  width: 300px;
+}
+
+.menu-courses-canvas-croissant {
+  &-first,
+  &-second {
+    width: 200px;
+  }
+
+  &-first {
+    left: calc(50% - 850px);
+    top: 700px;
+  }
+
+  &-second {
+    left: calc(50% + 850px);
+    top: 700px;
+    transform: rotate(25deg);
+  }
+}
+
+.menu-courses-canvas-cupcake {
+  left: calc(50% - 450px);
+  top: 900px;
+  width: 200px;
+}
+
+.menu-courses-canvas-yogurt {
+  left: calc(50% + 200px);
+  top: 700px;
 }
