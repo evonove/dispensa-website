@@ -18,6 +18,15 @@
   width: 75%;
 }
 
+.menu-ingredients-figure,
+.menu-preparation-figure {
+  width: 700px;
+
+  img {
+    width: 100%;
+  }
+}
+
 .menu-ingredients-description,
 .menu-preparation-description,
 .menu-courses-description {
