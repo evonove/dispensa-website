@@ -6,3 +6,12 @@
 
 // Lato - light
 @import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+// Journal - Regular
+@font-face {
+  font-family: 'Journal';
+  src: local('journal'),
+       url('/static/fonts/journal/journal.woff') format('woff'),
+       url('/static/fonts/journal/journal.ttf') format('ttf'),
+       url('/static/fonts/journal/journal.eot') format('eot');
+}
