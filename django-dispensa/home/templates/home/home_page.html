@@ -37,13 +37,16 @@
     </section>
 
     <section class="menu">
+        <div class="menu-path">
+            <img class="menu-path-svg js-inject-svg" src="{% static 'svg/path.svg' %}">
+        </div>
         <h1 class="menu-heading">Perché i nostri piatti sono buoni e genuini?</h1>
         <div class="menu-ingredients">
             <p class="menu-ingredients-description">
                 Perché utilizziamo soltanto ingredienti freschi e a filiera corta.
             </p>
             <figure class="menu-ingredients-figure">
-                <img src="{% static 'images/placeholder.png' %}">
+                <img src="{% static 'images/ingredients.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/ingredients.png' %}' ">
             </figure>
         </div>
         <div class="menu-preparation">
