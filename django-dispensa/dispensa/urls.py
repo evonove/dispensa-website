@@ -13,6 +13,7 @@ urlpatterns = []
 
 if settings.DEBUG:
     urlpatterns += [
+        url(r'^blog/$', TemplateView.as_view(template_name='blog_base.html')),
         url(r'^404/$', TemplateView.as_view(template_name='404.html')),
         url(r'^500/$', TemplateView.as_view(template_name='500.html')),
     ]

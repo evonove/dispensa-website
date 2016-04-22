@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load wagtailcore_tags %}
+
+
+{% block content %}
+    {% slugurl "home" as homepage_link %}
+    {% slugurl "blog" as blog_link %}
+
+    {% block blog_main %}{% endblock blog_main %}
+{% endblock content %}
