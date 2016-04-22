@@ -1,6 +1,7 @@
 .menu {
+  box-sizing: border-box;
   overflow: hidden;
-  padding: 3em 0;
+  padding: 3em 7%;
   position: relative;
   width: 100%;
 }
@@ -50,7 +51,7 @@
 .menu-ingredients-figure {
   left: calc(50% - 245px);
   position: absolute;
-  top: -295px;
+  top: -300px;
   width: 1412px;
 }
 
@@ -90,6 +91,19 @@
 
 .menu-courses-description {
   margin: auto;
+  width: 100%;
+}
+
+.menu-courses-description-top {
+  left: -150px;
+  position: relative;
+  top: -25px;
+}
+
+.menu-courses-description-bottom {
+  left: 30px;
+  position: relative;
+  top: -5px;
 }
 
 .menu-ingredients-canvas,
@@ -125,7 +139,7 @@
 }
 
 .menu-courses-canvas-breakfast {
-  left: 100px;
+  left: 150px;
   top: 300px;
 }
 
@@ -143,7 +157,8 @@
 
 .menu-courses-canvas-croissant {
   &-first,
-  &-second {
+  &-second,
+  &-third {
     width: 200px;
   }
 
@@ -153,6 +168,12 @@
   }
 
   &-second {
+    left: calc(50% - 1050px);
+    top: 525px;
+    transform: rotate(30deg);
+  }
+
+  &-third {
     left: calc(50% + 850px);
     top: 700px;
     transform: rotate(25deg);
@@ -160,8 +181,8 @@
 }
 
 .menu-courses-canvas-cupcake {
-  left: calc(50% - 315px);
-  top: 675px;
+  left: calc(50% - 320px);
+  top: 655px;
   width: 200px;
 }
 
@@ -195,8 +216,8 @@
 }
 
 .menu-courses-canvas-aperitif {
-  left: 75px;
-  top: 2100px;
+  left: 50px;
+  top: 2125px;
 }
 
 .menu-courses-canvas-croutons {
@@ -206,7 +227,7 @@
 }
 
 .menu-courses-canvas-cocktail {
-  left: calc(50% + 105px);
+  left: calc(50% + 110px);
   top: 2710px;
   width: 600px;
 }
