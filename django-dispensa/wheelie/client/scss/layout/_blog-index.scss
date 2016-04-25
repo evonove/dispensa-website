@@ -1,0 +1,55 @@
+.blog-background {
+  background: darken($mine, 7%) url("/static/images/icons-bg.png");
+  min-height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.blog {
+  position: relative;
+  z-index: 1;
+}
+
+.blog-index {
+  margin: auto;
+  padding: 1em;
+  width: 1024px;
+
+  & > * + * {
+    margin-top: 1em;
+  }
+}
+
+.blog-index-preview {
+  background: $white;
+  display: flex;
+  height: 342px;
+  overflow: hidden;
+  width: 1024px;
+}
+
+.blog-index-preview-post {
+  box-sizing: border-box;
+  height: 341px;
+  padding: 1em;
+  width: 50%;
+}
+
+.blog-index-preview-post-heading {
+  line-height: 1.2em;
+}
+
+.blog-index-preview-post-text {
+  font: 0.4em Lato, sans-serif;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+}
+
+.blog-index-preview-pics {
+  width: 50%;
+}
+
+.blog-index-preview-pics-pic {
+  width: 100%;
+}

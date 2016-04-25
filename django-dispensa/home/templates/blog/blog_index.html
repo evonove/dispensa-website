@@ -3,9 +3,34 @@
 {% load staticfiles %}
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
-{% load blog_tags %}
 
 
 {% block blog_main %}
-
+    <div class="blog">
+        <div class="blog-index">
+            <div class="blog-index-preview">
+                <article class="blog-index-preview-post">
+                    <h2 class="blog-index-preview-post-heading">Lorem ipsum dolor sit amet elit!</h2>
+                    <p class="blog-index-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
+                </article>
+                <figure class="blog-index-preview-pics">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                </figure>
+            </div>
+            <div class="blog-index-preview">
+                <article class="blog-index-preview-post">
+                    <h2 class="blog-index-preview-post-heading">Sed ut condimentum purus.</h2>
+                    <p class="blog-index-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
+                </article>
+                <figure class="blog-index-preview-pics">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                </figure>
+            </div>
+        </div>
+    </div>
 {% endblock blog_main %}
