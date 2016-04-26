@@ -1,4 +1,8 @@
 body {
   font: 48px 'Amatic SC', serif;
   line-height: 1.618em;
+
+  @media #{$medium} {
+    font-size: 36px;
+  }
 }
