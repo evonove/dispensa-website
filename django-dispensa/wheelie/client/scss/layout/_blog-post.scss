@@ -1,0 +1,20 @@
+.blog-post {
+  background: $white;
+  margin: 3em auto;
+  padding: 1.5em 1em;
+  width: 1024px;
+
+  & > * + * {
+    margin: 1em 0;
+  }
+}
+
+.blog-post-paragraph-text {
+  font: 0.5em Lato, sans-serif;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+}
+
+.blog-post-social-icon {
+  margin-right: 15px;
+}
