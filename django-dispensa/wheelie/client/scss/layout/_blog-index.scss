@@ -15,6 +15,10 @@
 
 .blog-header-navigation {
   position: relative;
+
+  @media #{$medium} {
+    height: 150px;
+  }
 }
 
 .blog-index {
@@ -28,6 +32,11 @@
 
   & > * + * {
     margin-top: 1em;
+  }
+
+  @media #{$medium} {
+    padding: 1em 0;
+    width: 750px;
   }
 }
 
@@ -94,11 +103,15 @@
   height: 342px;
   overflow: hidden;
   width: 1024px;
+
+  @media #{$medium} {
+    height: 250px;
+    width: 750px;
+  }
 }
 
 .blog-index-preview-post {
   box-sizing: border-box;
-  height: 341px;
   padding: 0.8em;
   position: relative;
   width: 50%;
