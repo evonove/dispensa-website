@@ -6,6 +6,10 @@ dj-database-url
 psycopg2
 pytz
 
+# third parties
+django-s3-storage
+whitenoise
+
 # website
 wagtail
 

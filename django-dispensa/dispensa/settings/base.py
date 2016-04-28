@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_s3_storage',
 
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
@@ -123,17 +124,20 @@ USE_TZ = True
 
 # static files and media
 ASSETS_ROOT = env('DJANGO_ASSETS_ROOT', BASE_DIR)
-
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(ASSETS_ROOT, 'static')
 MEDIA_ROOT = os.path.join(ASSETS_ROOT, 'media')
+
+# using a CDN if available
+STATIC_HOST = os.environ.get('DJANGO_STATIC_HOST', '')
+MEDIA_HOST = os.environ.get('DJANGO_MEDIA_HOST', '')
+STATIC_URL = STATIC_HOST + '/static/'
+MEDIA_URL = MEDIA_HOST + '/media/'
 
 # emails
 DEFAULT_FROM_EMAIL = env('DJANGO_FROM_EMAIL')
 
-EMAIL_BACKEND_DEFAULT = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', EMAIL_BACKEND_DEFAULT)
+DEFAULT_EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', DEFAULT_EMAIL_BACKEND)
 
 # logging
 LOGSTASH_HOST = env('LOGSTASH_HOST', '127.0.0.1')
