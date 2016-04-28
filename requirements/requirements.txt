@@ -53,6 +53,7 @@ traitlets==4.2.1          # via ipython
 Unidecode==0.4.19         # via wagtail
 uwsgi==2.0.12
 wagtail==1.4.3
+whitenoise==3.0
 Willow==0.3               # via wagtail
 
 # The following packages are commented out because they are
