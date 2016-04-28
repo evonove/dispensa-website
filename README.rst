@@ -55,6 +55,15 @@ just change ``DATABASE_URL`` and ``CACHE_URL`` with your linked container URLs.
 * ``DATABASE_URL`` (default: ``postgres://devel:123456@127.0.0.1:5432/dispensa``)
 * ``CACHE_URL`` (default: ``redis://127.0.0.1:6379/1``)
 
+Content Delivery Network
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If your deployment makes use of a Content Delivery Network, configure the
+following environment variables:
+
+* ``DJANGO_STATIC_HOST`` (default: ``''``)
+* ``DJANGO_MEDIA_HOST`` (default: ``''``)
+
 Email
 ~~~~~
 
