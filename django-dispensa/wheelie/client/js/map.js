@@ -6,6 +6,7 @@ function initMap() {
         zoom: 17,
         scrollwheel: false,
         mapTypeControl: false,
+        draggable: false,
         styles: [
             {
                 featureType: 'water',
