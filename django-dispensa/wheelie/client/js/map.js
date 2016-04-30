@@ -189,6 +189,12 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: LatLng,
         map: map,
-        icon: iconMarker
+        icon: iconMarker,
+        url: 'http://maps.google.com/maps?&z=10&q=43.115767+12.388208&ll=43.115767+12.388208'
     });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        window.open(marker.url, '_blank');
+    });
+
 }
