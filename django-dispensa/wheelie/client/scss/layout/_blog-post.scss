@@ -1,16 +1,24 @@
 .blog-post {
+  box-sizing: border-box;
   background: $white;
   margin: 3em auto;
   padding: 1.5em 1em;
   width: 1024px;
+
+  figure > img {
+    width: 100%;
+  }
 
   & > * + * {
     margin: 1em 0;
   }
 
   @media #{$medium} {
-    box-sizing: border-box;
     width: 750px;
+  }
+
+  @media #{$small} {
+    width: 95%;
   }
 }
 
@@ -22,4 +30,5 @@
 
 .blog-post-social-icon {
   margin-right: 15px;
+  width: 25px;
 }
