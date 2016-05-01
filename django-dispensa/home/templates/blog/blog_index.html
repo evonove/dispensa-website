@@ -20,6 +20,7 @@
                 </div>
             </div>
             <div class="blog-header-navigation header-navigation">
+                <img class="blog-header-navigation-icon js-inject-svg" src="{% static 'svg/menu.svg' %}">
                 <nav class="blog-header-navigation-nav header-navigation-nav">
                     <ul>
                         <li><a href="#">Dispensa 63</a></li>
@@ -62,68 +63,70 @@
         </div>
 
         <section class="blog-index">
-            <div class="blog-index-preview">
-                <article class="blog-index-preview-post">
-                    <h2 class="blog-index-preview-post-heading">Lorem ipsum dolor sit amet elit!</h2>
-                    <p class="blog-index-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
-                    <div class="blog-index-preview-post-meta">
-                        <div class="blog-index-preview-post-meta-date">
-                            <p>6.7.2016</p>
-                        </div>
-                        <div class="blog-index-preview-post-meta-tags">
-                            <span class="blog-index-preview-post-meta-tags-tag">Lorem</span>
-                            <span class="blog-index-preview-post-meta-tags-tag">Ipsum</span>
-                            <span class="blog-index-preview-post-meta-tags-tag">Dolor Sit</span>
-                        </div>
-                    </div>
-                </article>
-                <figure class="blog-index-preview-pics">
-                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
-                </figure>
-            </div>
-            <div class="blog-index-preview">
-                <article class="blog-index-preview-post">
-                    <h2 class="blog-index-preview-post-heading">Sed ut condimentum purus.</h2>
-                    <p class="blog-index-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
-                    <div class="blog-index-preview-post-meta">
-                        <div class="blog-index-preview-post-meta-date">
-                            <p>12.6.2016</p>
-                        </div>
-                        <div class="blog-index-preview-post-meta-tags">
-                            <span class="blog-index-preview-post-meta-tags-tag">Lorem</span>
+            <div class="blog-index-container">
+                <article class="blog-index-container-preview">
+                    <div class="blog-index-container-preview-post">
+                        <h2 class="blog-index-container-preview-post-heading">Lorem ipsum dolor sit amet elit!</h2>
+                        <p class="blog-index-container-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
+                        <div class="blog-index-container-preview-post-meta">
+                            <div class="blog-index-container-preview-post-meta-date">
+                                <p>6.7.2016</p>
+                            </div>
+                            <div class="blog-index-container-preview-post-meta-tags">
+                                <span class="blog-index-container-preview-post-meta-tags-tag">Lorem</span>
+                                <span class="blog-index-container-preview-post-meta-tags-tag">Ipsum</span>
+                                <span class="blog-index-container-preview-post-meta-tags-tag">Dolor Sit</span>
+                            </div>
                         </div>
                     </div>
+                    <figure class="blog-index-container-preview-pics">
+                        <img class="blog-index-container-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    </figure>
                 </article>
-                <figure class="blog-index-preview-pics grid-six">
-                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
-                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
-                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
-                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
-                </figure>
-            </div>
-            <div class="blog-index-preview">
-                <article class="blog-index-preview-post">
-                    <h2 class="blog-index-preview-post-heading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</h2>
-                    <div class="blog-index-preview-post-meta">
-                        <div class="blog-index-preview-post-meta-date">
-                            <p>26.5.2016</p>
-                        </div>
-                        <div class="blog-index-preview-post-meta-tags">
-                            <span class="blog-index-preview-post-meta-tags-tag">Ipsum</span>
-                            <span class="blog-index-preview-post-meta-tags-tag">Amet</span>
+                <article class="blog-index-container-preview">
+                    <div class="blog-index-container-preview-post">
+                        <h2 class="blog-index-container-preview-post-heading">Sed ut condimentum purus.</h2>
+                        <p class="blog-index-container-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
+                        <div class="blog-index-container-preview-post-meta">
+                            <div class="blog-index-container-preview-post-meta-date">
+                                <p>12.6.2016</p>
+                            </div>
+                            <div class="blog-index-container-preview-post-meta-tags">
+                                <span class="blog-index-container-preview-post-meta-tags-tag">Lorem</span>
+                            </div>
                         </div>
                     </div>
+                    <figure class="blog-index-container-preview-pics grid-six">
+                        <img class="blog-index-container-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                        <img class="blog-index-container-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                        <img class="blog-index-container-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                        <img class="blog-index-container-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    </figure>
                 </article>
-                <figure class="blog-index-preview-pics">
-                    <img class="blog-index-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
-                </figure>
+                <article class="blog-index-container-preview">
+                    <div class="blog-index-container-preview-post">
+                        <h2 class="blog-index-container-preview-post-heading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</h2>
+                        <div class="blog-index-container-preview-post-meta">
+                            <div class="blog-index-container-preview-post-meta-date">
+                                <p>26.5.2016</p>
+                            </div>
+                            <div class="blog-index-container-preview-post-meta-tags">
+                                <span class="blog-index-container-preview-post-meta-tags-tag">Ipsum</span>
+                                <span class="blog-index-container-preview-post-meta-tags-tag">Amet</span>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="blog-index-container-preview-pics">
+                        <img class="blog-index-container-preview-pics-pic" src="src={% static 'images/blog-placeholder.webp' %}" onerror="this.onerror=null; this.src='{% static 'images/blog-placeholder.jpg' %}'">
+                    </figure>
+                </article>
             </div>
             <div class="blog-index-button">
                 Mostra di più
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="blog-footer footer">
             <p class="footer-text">&copy; 2016 Dispensa 63 All rights reserved. Website design and development by Evonove.</p>
         </footer>
 
