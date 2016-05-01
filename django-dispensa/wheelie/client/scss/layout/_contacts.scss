@@ -10,6 +10,10 @@
   & > * + * {
   margin-top: 1em;
   }
+
+  @media #{$small}, #{$medium} {
+    padding: 3em 12.5%;
+  }
 }
 
 .contacts-container-opening,

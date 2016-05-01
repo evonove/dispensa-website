@@ -1,6 +1,10 @@
 .about {
   background: darken($mine, 7%) url("/static/images/icons-bg.png");
   padding: 3em 25%;
+
+  @media #{$small}, #{$medium} {
+    padding: 3em 12.5%;
+  }
 }
 
 .about-bio {

@@ -2,6 +2,10 @@
   background: url("/static/images/event-bg.png");
   border-top: 10px $mine solid;
   padding: 3em 25%;
+
+  @media #{$small}, #{$medium} {
+    padding: 3em 12.5%;
+  }
 }
 
 .special-events-description {
