@@ -1,3 +1,4 @@
+var tagButtonContainer = document.querySelector('.blog-tags-search-button');
 var tagButton = document.querySelector('.blog-tags-search-button-container');
 var tagContainer = document.querySelector('.blog-tags-search');
 var bodyTag = document.getElementsByTagName('body')[0];
@@ -13,5 +14,5 @@ function tagEvent () {
     tagContainer.classList.toggle('open');
     bodyTag.classList.toggle('viewport-block');
     iconSwitch.classList.toggle('switch');
+    tagButtonContainer.classList.toggle('open');
 }
-

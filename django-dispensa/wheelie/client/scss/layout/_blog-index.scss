@@ -129,6 +129,10 @@ body {
   width: 25%;
   text-align: center;
 
+  @media #{$small}, #{$medium} {
+    width: 90%;
+  }
+
   ul {
     margin-top: 1em;
   }
@@ -156,8 +160,19 @@ body {
   z-index: 200;
 
   @media #{$small}, #{$medium} {
+    display: flex;
     margin-top: 0.5em;
-    position: static;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  &.open {
+    @media #{$small}, #{$medium} {
+      margin-top: 0;
+      position: absolute;
+      top: 0.1vh;
+    }
   }
 }
 
@@ -180,9 +195,17 @@ body {
   top: 22px;
   transition: 0.2s ease;
   width: 35px;
+
+  @media #{$small}, #{$medium} {
+    top: 12px;
+  }
   
   &.switch {
     top: -46px;
+
+    @media #{$small}, #{$medium} {
+      top: -56px;
+    }
   }
 }
 
@@ -216,6 +239,11 @@ body {
   padding: 0 0.5em;
   text-align: center;
   text-overflow: ellipsis;
+
+  @media #{$small}, #{$medium} {
+    line-height: 1.25em;
+    text-align: left;
+  }
 
   span {
     font: 0.4em 'Lato', sans-serif;
