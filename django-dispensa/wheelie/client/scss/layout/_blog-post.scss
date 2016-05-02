@@ -30,5 +30,23 @@
 
 .blog-post-social-icon {
   margin-right: 15px;
-  width: 25px;
+  width: 40px;
+
+  @media #{$small} {
+    width: 25px;
+  }
+}
+
+.blog-post-back {
+  cursor: default;
+  transition: 0.2s ease;
+
+  &:hover {
+    letter-spacing: 0.1em;
+    transition: 0.2s ease;
+  }
+
+  span {
+    margin-right: 15px;
+  }
 }
