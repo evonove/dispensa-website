@@ -15,9 +15,10 @@ var vendors = [
 
 var scripts = [
     'compatibility/modernizr-custom.js',
+    'svg-injections.js',
     'map.js',
     'path.js',
-    'svg-injections.js'
+    'tags.js'
 ];
 
 wheelie.update('uglify', {

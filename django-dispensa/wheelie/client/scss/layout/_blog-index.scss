@@ -1,3 +1,9 @@
+body {
+  &.viewport-block {
+    overflow: hidden;
+  }
+}
+
 .blog {
   background: darken($mine, 7%) url("/static/images/icons-bg.png");
   background-attachment: fixed;
@@ -97,27 +103,23 @@
   }
 }
 
-.blog-index {
-  margin-top: 1.5em;
-  overflow: hidden;
-
-  @media #{$medium} {
-    margin-top: 0;
-  }
-}
-
-.blog-index-search {
+.blog-tags-search {
   background: rgba(255, 255, 255, 0.9);
   height: 100vh;
   left: -100vw;
   overflow: scroll;
-  position: absolute;
+  position: fixed;
   top: 0;
+  transition: 0.2s ease;
   width: 100vw;
   z-index: 100;
+
+  &.open {
+    left: 0;
+  }
 }
 
-.blog-index-search-taglist {
+.blog-tags-search-taglist {
   margin: 3em auto 0;
   width: 25%;
   text-align: center;
@@ -127,8 +129,10 @@
   }
 
   ul li {
-    transition: 0.2s ease;
     cursor: default;
+    font-family: Lato;
+    font-size: 0.667em;
+    transition: 0.2s ease;
   }
 
   ul li:hover {
@@ -137,21 +141,14 @@
   }
 }
 
-.blog-index-search-button {
+.blog-tags-search-button {
   background: $white;
   cursor: default;
-  display: flex;
-  padding: 0 0.5em;
   position: fixed;
   right: 0;
   top: 12em;
   transition: 0.2s ease;
   z-index: 200;
-
-  &:hover {
-    letter-spacing: 0.1em;
-    transition: 0.2s ease;
-  }
 
   @media #{$small}, #{$medium} {
     margin-top: 0.5em;
@@ -159,7 +156,34 @@
   }
 }
 
-.blog-index-search-button-lens {
+.blog-tags-search-button-container {
+  display: flex;
+  overflow: hidden;
+  padding: 0 0.5em;
+  transition: 0.2s ease;
+  width: 100px;
+
+  &:hover {
+    letter-spacing: 0.1em;
+    transition: 0.2s ease;
+    width: auto;
+  }
+}
+
+.blog-tags-search-button-container-icon {
+  position: relative;
+  top: 22px;
+  transition: 0.2s ease;
+  width: 35px;
+  
+  &.switch {
+    top: -46px;
+  }
+}
+
+.blog-tags-search-button-container-icon-open {
+  background: url("/static/svg/search.svg") no-repeat center / contain;
+  height: 35px;
   width: 35px;
 
   @media #{$medium} {
@@ -167,7 +191,48 @@
   }
 }
 
-.blog-index-search-button-text {
+.blog-tags-search-button-container-icon-close {
+  background: url("/static/svg/close.svg") no-repeat center / contain;
+  height: 35px;
+  position: relative;
+  top: 33px;
+  width: 35px;
+
+  @media #{$medium} {
+    width: 26px;
+  }
+}
+
+.blog-tags-search-button-tags_selected {
+  box-sizing: border-box;
+  color: #ccc;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0 0.5em;
+  text-align: center;
+  text-overflow: ellipsis;
+
+  span {
+    font: 0.4em 'Lato', sans-serif;
+    line-height: 2.618em;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.blog-index {
+  margin-top: 1.5em;
+  overflow: hidden;
+
+  @media #{$medium} {
+    margin-top: 0;
+  }
+}
+
+.blog-tags-search-button-text {
   margin-left: 10px;
   text-transform: uppercase;
 }
