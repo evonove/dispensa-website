@@ -60,10 +60,15 @@ body {
 
 .blog-header-logo-dispensa63-white {
   display: none;
+  height: 103px;
   width: 100%;
 
   @media #{$small}, #{$medium} {
     display: block;
+  }
+
+  @media #{$small} {
+    height: 74px;
   }
 }
 
@@ -87,7 +92,7 @@ body {
   width: 25px;
   z-index: 1000;
 
-  @media #{$small}, #{$medium} {
+  @media #{$small} {
     display: block;
   }
 }
