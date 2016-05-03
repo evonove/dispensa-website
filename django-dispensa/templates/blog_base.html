@@ -8,5 +8,8 @@
     {% slugurl "home" as homepage_link %}
     {% slugurl "blog" as blog_link %}
 
-    {% block blog_main %}{% endblock blog_main %}
+    <div class="blog">
+        {% include 'partials/blog_header.html' with options=settings.options.WebsiteSettings %}
+        {% block blog_main %}{% endblock blog_main %}
+    </div>
 {% endblock content %}

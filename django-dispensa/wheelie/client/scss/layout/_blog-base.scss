@@ -1,0 +1,13 @@
+.blog {
+  background: darken($mine, 7%) url("/static/images/icons-bg.png");
+  background-attachment: fixed;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 125px;
+  position: relative;
+  z-index: 1;
+
+  @media #{$small}, #{$medium} {
+    padding-top: 1em;
+  }
+}

@@ -6,33 +6,7 @@
 
 {% block blog_main %}
 
-<div class="blog">
-    <header class="blog-header header">
-        <div class="blog-header-logo header-logo">
-            <div class="blog-header-logo-icon header-logo-icon">
-                <img class="header-logo-icon-svg js-inject-svg" src="{% static 'svg/whisk.svg' %}">
-            </div>
-            <div class="blog-header-logo-dispensa63 header-logo-dispensa63">
-                <img class="blog-header-logo-dispensa63-svg js-inject-svg" src="{% static 'svg/logo.svg' %}">
-                <img class="blog-header-logo-dispensa63-white js-inject-svg" src="{% static 'svg/logo-white.svg' %}">
-            </div>
-        </div>
-        <div class="blog-header-navigation header-navigation">
-            <img class="blog-header-navigation-icon js-inject-svg" src="{% static 'svg/menu.svg' %}">
-            <nav class="blog-header-navigation-nav header-navigation-nav">
-                <ul>
-                    <li><a href="#">Dispensa 63</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">evonove.it</a></li>
-                    <li><a href="#">Contatti</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-            <div class="header-navigation-blur"></div>
-        </div>
-    </header>
-
-    <div class="blog-post">
+    <section class="blog-post">
         <h1>Lorem ipsum dolor sit amet elit!</h1>
         <p>01 Aprile 2016</p>
         <div class="blog-post-paragraph">
@@ -57,7 +31,6 @@
             <img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/pinterest.svg' %}">
         </div>
         <div class="blog-post-back"><span>< </span>Torna all'indice</div>
-    </div>
-</div>
+    </section>
 
 {% endblock blog_main %}

@@ -4,110 +4,6 @@ body {
   }
 }
 
-.blog {
-  background: darken($mine, 7%) url("/static/images/icons-bg.png");
-  background-attachment: fixed;
-  height: 100%;
-  min-height: 100vh;
-  padding-top: 125px;
-  position: relative;
-  z-index: 1;
-
-  @media #{$small}, #{$medium} {
-    padding-top: 1em;
-  }
-}
-
-.blog-header {
-  height: auto;
-  position: relative;
-}
-
-.blog-header-logo {
-  @media #{$small}, #{$medium} {
-    background: none;
-    left: 0;
-    padding: 0;
-    top: 0;
-    transform: none;
-    width: 33%;
-  }
-}
-
-.blog-header-logo-icon {
-  @media #{$small}, #{$medium} {
-    display: none;
-  }
-}
-
-.blog-header-logo-dispensa63 {
-  @media #{$medium} {
-    margin: 25px auto 0;
-    width: 175px;
-  }
-
-  @media #{$small} {
-    margin: 25px 0 0 5%;
-    width: 125px;
-  }
-}
-
-.blog-header-logo-dispensa63-svg {
-  @media #{$small}, #{$medium} {
-    display: none;
-  }
-}
-
-.blog-header-logo-dispensa63-white {
-  display: none;
-  height: 103px;
-  width: 100%;
-
-  @media #{$small}, #{$medium} {
-    display: block;
-  }
-
-  @media #{$small} {
-    height: 74px;
-  }
-}
-
-.blog-header-navigation {
-  position: relative;
-
-  @media #{$medium} {
-    height: 150px;
-  }
-
-  @media #{$small} {
-    height: 120px;
-  }
-}
-
-.blog-header-navigation-icon {
-  display: none;
-  position: absolute;
-  right: 5%;
-  top: 48px;
-  width: 25px;
-  z-index: 1000;
-
-  @media #{$small} {
-    display: block;
-  }
-}
-
-.blog-header-navigation-nav {
-  @media #{$small}, #{$medium} {
-    right: 0;
-    width: 65%;
-  }
-
-  @media #{$small} {
-    display: none;
-  }
-}
-
 .blog-tags-search {
   background: rgba(255, 255, 255, 0.9);
   height: 100vh;
@@ -429,8 +325,4 @@ body {
     letter-spacing: 0.1em;
     transition: 0.2s ease;
   }
-}
-
-.blog-footer {
-  margin-top: 1.5em;
 }
