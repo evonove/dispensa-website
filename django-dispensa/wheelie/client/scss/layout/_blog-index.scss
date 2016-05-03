@@ -336,6 +336,12 @@ body {
 .blog-index-container-preview-post-heading {
   font-size: 1em;
   line-height: 1.2em;
+  letter-spacing: 0;
+
+  &:hover {
+    letter-spacing: 0;
+    text-decoration: underline;
+  }
 }
 
 .blog-index-container-preview-post-text {
