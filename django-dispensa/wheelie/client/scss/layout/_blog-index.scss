@@ -257,7 +257,7 @@ body {
 }
 
 .blog-index {
-  margin-top: 1.5em;
+  margin: 3em auto;
   overflow: hidden;
 
   @media #{$medium} {
@@ -275,7 +275,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 1em 0;
   width: 1024px;
 
   & > * + * {
