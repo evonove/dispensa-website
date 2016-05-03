@@ -6,3 +6,13 @@ body {
     font-size: 36px;
   }
 }
+
+a {
+  cursor: default;
+  transition: 0.2s ease;
+
+  &:hover {
+    letter-spacing: 0.1em;
+    transition: 0.2s ease;
+  }
+}
