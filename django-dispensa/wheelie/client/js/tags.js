@@ -10,7 +10,7 @@ tagSelected.style.width = tagWidth;
 
 tagButton.addEventListener('click', tagEvent);
 
-function tagEvent () {
+function tagEvent() {
     tagContainer.classList.toggle('open');
     bodyTag.classList.toggle('viewport-block');
     iconSwitch.classList.toggle('switch');
