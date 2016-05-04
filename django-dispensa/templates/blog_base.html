@@ -12,5 +12,6 @@
         {% include 'partials/header.html' with options=settings.options.WebsiteSettings %}
         {% include 'partials/sticky_header.html' with options=settings.options.WebsiteSettings %}
         {% block blog_main %}{% endblock blog_main %}
+        {% include 'partials/footer.html' with options=settings.options.WebsiteSettings %}
     </div>
 {% endblock content %}

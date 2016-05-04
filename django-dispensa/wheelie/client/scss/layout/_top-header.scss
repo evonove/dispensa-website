@@ -1,20 +1,24 @@
-.blog .header {
+.blog .header,
+.error .header {
   height: auto;
   position: relative;
 }
 
-.blog .header-logo {
+.blog .header-logo,
+.error .header-logo {
   @media #{$small}, #{$medium} {
     top: 0;
     transform: none;
   }
 }
 
-.blog .header-navigation {
+.blog .header-navigation,
+.error .header-navigation {
   position: relative;
 }
 
-.blog .header-logo-dispensa63 {
+.blog .header-logo-dispensa63,
+.error .header-logo-dispensa63 {
   margin-top: 0;
 
   @media #{$small} {
