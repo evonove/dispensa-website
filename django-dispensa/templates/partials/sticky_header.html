@@ -1,0 +1,26 @@
+{% load static from staticfiles %}
+
+<header class="header sticky-header">
+    <div class="header-logo sticky-header-logo">
+        <div class="header-logo-icon sticky-header-logo-icon">
+            <img class="header-logo-icon-svg js-inject-svg" src="{% static 'svg/whisk.svg' %}">
+        </div>
+        <div class="header-logo-dispensa63 sticky-header-logo-dispensa63">
+            <img class="header-logo-dispensa63-black sticky-header-logo-dispensa63-black js-inject-svg" src="{% static 'svg/logo.svg' %}">
+            <img class="header-logo-dispensa63-white sticky-header-logo-dispensa63-white js-inject-svg" src="{% static 'svg/logo-white.svg' %}">
+        </div>
+    </div>
+    <div class="header-navigation sticky-header-navigation home-sticky-header-navigation">
+        <img class="header-navigation-icon sticky-header-navigation-icon js-inject-svg" src="{% static 'svg/menu.svg' %}">
+        <nav class="header-navigation-nav sticky-header-navigation-nav">
+            <ul>
+                <li><a href="#">Dispensa 63</a></li>
+                <li><a href="#about">Menù</a></li>
+                <li><a href="https://evonove.it/" target="_blank">evonove.it</a></li>
+                <li><a href="#contacts">Contatti</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="header-navigation-blur"></div>
+    </div>
+</header>

@@ -1,0 +1,23 @@
+.blog .header {
+  height: auto;
+  position: relative;
+}
+
+.blog .header-logo {
+  @media #{$small}, #{$medium} {
+    top: 0;
+    transform: none;
+  }
+}
+
+.blog .header-navigation {
+  position: relative;
+}
+
+.blog .header-logo-dispensa63 {
+  margin-top: 0;
+
+  @media #{$small} {
+    margin-top: 15px;
+  }
+}

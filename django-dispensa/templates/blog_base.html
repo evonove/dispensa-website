@@ -9,7 +9,8 @@
     {% slugurl "blog" as blog_link %}
 
     <div class="blog">
-        {% include 'partials/blog_header.html' with options=settings.options.WebsiteSettings %}
+        {% include 'partials/header.html' with options=settings.options.WebsiteSettings %}
+        {% include 'partials/sticky_header.html' with options=settings.options.WebsiteSettings %}
         {% block blog_main %}{% endblock blog_main %}
     </div>
 {% endblock content %}
