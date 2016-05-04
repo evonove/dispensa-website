@@ -1,0 +1,46 @@
+.error {
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 125px;
+  position: relative;
+  overflow: hidden;
+
+  @media #{$small}, #{$medium} {
+    padding-top: 1em;
+  }
+}
+
+.error .splash {
+  filter: blur(10px) grayscale(1);
+  position: absolute;
+  top: 0;
+  transform: scale(1.09);
+}
+
+.error .header-navigation-blur {
+  background: rgba(0, 0, 0, 0.5);
+  filter: none;
+}
+
+.error-message {
+  color: $white;
+  font-size: 1.5em;
+  left: 50%;
+  line-height: 1.5em;
+  position: absolute;
+  text-align: center;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+  z-index: 63;
+
+  @media #{$medium} {
+    top: 55%;
+  }
+
+  @media #{$small} {
+    font-size: 9vh;
+    line-height: 11vh;
+    top: 60%;
+  }
+}
