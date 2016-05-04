@@ -28,7 +28,19 @@
   margin-top: 0.5em;
 }
 
+.blog-post-social {
+  align-items: center;
+  display: flex;
+}
+
+.blog-post-social-heading {
+  font-size: 1em;
+  text-transform: initial;
+  margin-right: 25px;
+}
+
 .blog-post-social-icon {
+  height: 100%;
   margin-right: 15px;
   width: 40px;
 
