@@ -16,6 +16,7 @@ var vendors = [
 var scripts = [
     'compatibility/modernizr-custom.js',
     'svg-injections.js',
+    'nav.js',
     'map.js',
     'path.js',
     'tags.js'
