@@ -8,7 +8,7 @@
     display: none;
   }
 
-  &.sticky-header {
+  &.mobile-header {
     display: none;
 
     @media #{$small}, #{$medium} {
@@ -16,8 +16,16 @@
     }
   }
 
-  &.scroll-header {
+  &.sticky-header {
     display: block;
+    position: fixed;
+    top: -125px;
+    transition: 0.2s ease;
+
+    &.sticky-show {
+      top: 0;
+      transition: 0.2s ease;
+    }
   }
 }
 
@@ -32,7 +40,7 @@
   width: 100%;
   z-index: $z-logo;
 
-  &.sticky-header-logo {
+  &.mobile-header-logo {
     background: none;
     left: 0;
     padding: 0;
@@ -45,7 +53,7 @@
     }
   }
 
-  &.scroll-header-logo {
+  &.sticky-header-logo {
     top: 0;
     transform: translateY(0);
   }
@@ -56,7 +64,7 @@
   margin: auto;
   width: 213px;
 
-  &.sticky-header-logo-icon {
+  &.mobile-header-logo-icon {
     display: none;
   }
 }
@@ -65,18 +73,18 @@
   margin: 15px auto 0;
   width: 285px;
 
-  &.sticky-header-logo-dispensa63 {
+  &.mobile-header-logo-dispensa63 {
     margin: 25px 0 0 5%;
     width: 125px;
   }
 
-  &.scroll-header-logo-dispensa63 {
+  &.sticky-header-logo-dispensa63 {
     margin: 0 0 0 5%;
   }
 }
 
 .header-logo-dispensa63-black {
-  &.sticky-header-logo-dispensa63-black {
+  &.mobile-header-logo-dispensa63-black {
     display: none;
   }
 }
@@ -86,7 +94,7 @@
   height: 103px;
   width: 100%;
 
-  &.sticky-header-logo-dispensa63-white {
+  &.mobile-header-logo-dispensa63-white {
     display: block;
 
     @media #{$small} {
@@ -107,18 +115,18 @@
   top: 0;
   width: 100%;
 
-  &.sticky-header-navigation {
+  &.mobile-header-navigation {
     bottom: 0;
     height: 100px;
 
-    &.sticky-header-navigation-open {
+    &.mobile-header-navigation-open {
       @media #{$small} {
         height: auto;
       }
     }
   }
 
-  &.scroll-header-navigation {
+  &.sticky-header-navigation {
     bottom: auto;
   }
 }
@@ -131,7 +139,7 @@
   width: 25px;
   z-index: 1000;
 
-  &.sticky-header-navigation-icon {
+  &.mobile-header-navigation-icon {
     @media #{$small} {
       display: block;
     }
@@ -144,7 +152,7 @@
   width: 100%;
   z-index: $z-nav;
 
-  &.sticky-header-navigation-nav {
+  &.mobile-header-navigation-nav {
     right: 0;
     width: 65%;
 
@@ -155,7 +163,7 @@
       width: 100%;
     }
 
-    &.sticky-header-navigation-nav-open {
+    &.mobile-header-navigation-nav-open {
       @media #{$small} {
         opacity: 1;
       }
@@ -183,7 +191,7 @@
   width: 20%;
 }
 
-.sticky-header-navigation-nav ul li {
+.mobile-header-navigation-nav ul li {
   flex-grow: 0.5;
   font-size: 0.4em;
   width: auto;
@@ -208,6 +216,11 @@
 
   .no-webp & {
     background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
+  }
+
+  &.sticky-header-navigation-blur {
+    opacity: 0.97;
+    transform: scale(1.09);
   }
 }
 

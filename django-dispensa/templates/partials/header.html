@@ -1,5 +1,6 @@
 {% load static from staticfiles %}
 
+
 <header class="header">
     <div class="header-logo">
         <div class="header-logo-icon">
@@ -11,14 +12,30 @@
     </div>
     <div class="header-navigation">
         <nav class="header-navigation-nav">
-            <ul>
-                <li><a href="#">Dispensa 63</a></li>
-                <li><a href="#about">Menù</a></li>
-                <li><a href="https://evonove.it/" target="_blank">evonove.it</a></li>
-                <li><a href="#contacts">Contatti</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
+            {% include 'partials/menu.html' %}
         </nav>
     <div class="header-navigation-blur"></div>
+    </div>
+</header>
+
+<header class="header mobile-header">
+    <div class="header-logo mobile-header-logo">
+        <div class="header-logo-icon mobile-header-logo-icon">
+            <img class="header-logo-icon-svg js-inject-svg" src="{% static 'svg/whisk.svg' %}">
+        </div>
+        <div class="header-logo-dispensa63 mobile-header-logo-dispensa63">
+            <img class="header-logo-dispensa63-white mobile-header-logo-dispensa63-white js-inject-svg" src="{% static 'svg/logo-white.svg' %}">
+        </div>
+    </div>
+    <div class="header-navigation mobile-header-navigation home-mobile-header-navigation">
+        <svg class="header-navigation-icon mobile-header-navigation-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+            <g fill="#ffffff">
+                <path d="M0 0h22.2v22.2H0zM0 33.9h22.2v22.2H0zM0 67.8h22.2V90H0zM33.9 0h22.2v22.2H33.9zM33.9 33.9h22.2v22.2H33.9zM67.8 33.9H90v22.2H67.8zM33.9 67.8h22.2V90H33.9zM67.8 67.8H90V90H67.8zM67.8 0H90v22.2H67.8z"/>
+            </g>
+        </svg>
+        <nav class="header-navigation-nav mobile-header-navigation-nav">
+            {% include 'partials/menu.html' %}
+        </nav>
+        <div class="header-navigation-blur mobile-header-navigation-blur"></div>
     </div>
 </header>

@@ -1,12 +1,12 @@
 (function() {
-    var stickyOpen = document.querySelector('.sticky-header-navigation-icon');
-    var stickyNavigation = document.querySelector('.sticky-header-navigation');
-    var stickyNavigationNav = document.querySelector('.sticky-header-navigation-nav');
+    var mobileOpen = document.querySelector('.mobile-header-navigation-icon');
+    var mobileNavigation = document.querySelector('.mobile-header-navigation');
+    var mobileNavigationNav = document.querySelector('.mobile-header-navigation-nav');
 
-    stickyOpen.addEventListener('click', openNav);
+    mobileOpen.addEventListener('click', openNav);
 
     function openNav () {
-        stickyNavigation.classList.toggle('sticky-header-navigation-open');
-        stickyNavigationNav.classList.toggle('sticky-header-navigation-nav-open');
+        mobileNavigation.classList.toggle('mobile-header-navigation-open');
+        mobileNavigationNav.classList.toggle('mobile-header-navigation-nav-open');
     }
 })();
