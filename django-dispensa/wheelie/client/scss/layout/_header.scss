@@ -18,9 +18,14 @@
 
   &.sticky-header {
     display: block;
+    height: auto;
     position: fixed;
     top: -125px;
     transition: 0.2s ease;
+
+    @media #{$small} {
+      top: -225px;
+    }
 
     &.sticky-show {
       top: 0;
@@ -80,7 +85,7 @@
 
   &.sticky-header-logo-dispensa63 {
     margin: 0 0 0 5%;
-    
+
     @media #{$small} {
       margin-top: 15px;
     }
@@ -125,13 +130,20 @@
 
     &.mobile-header-navigation-open {
       @media #{$small} {
-        height: auto;
+        padding-top: 100px;
+        top: 100px;
       }
     }
   }
 
   &.sticky-header-navigation {
     bottom: auto;
+
+    &.sticky-header-navigation-open {
+      @media #{$small} {
+        padding-top: 100px;
+      }
+    }
   }
 }
 
@@ -170,6 +182,14 @@
     &.mobile-header-navigation-nav-open {
       @media #{$small} {
         opacity: 1;
+      }
+    }
+
+    &.sticky-header-navigation-nav {
+      &.sticky-header-navigation-nav-open {
+        @media #{$small} {
+          opacity: 1;
+        }
       }
     }
   }
@@ -220,6 +240,10 @@
 
   .no-webp & {
     background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
+  }
+
+  @media #{$small} {
+    top: -100px;
   }
 
   &.sticky-header-navigation-blur {
