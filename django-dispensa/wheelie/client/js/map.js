@@ -196,5 +196,4 @@ function initMap() {
     google.maps.event.addListener(marker, 'click', function() {
         window.open(marker.url, '_blank');
     });
-
 }

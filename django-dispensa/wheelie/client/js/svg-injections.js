@@ -1,5 +1,4 @@
-// Elements to inject
-var mySVGsToInject = document.querySelectorAll('img.js-inject-svg');
-
-// Do the injection
-SVGInjector(mySVGsToInject);
+(function() {
+    var mySVGsToInject = document.querySelectorAll('img.js-inject-svg');
+    SVGInjector(mySVGsToInject);
+})();

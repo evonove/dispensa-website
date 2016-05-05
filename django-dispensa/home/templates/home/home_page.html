@@ -137,3 +137,8 @@
 {% include 'partials/footer.html' with options=settings.options.WebsiteSettings %}
 
 {% endblock content %}
+
+{% block js %}
+    {{block.super}}
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+{% endblock js %}

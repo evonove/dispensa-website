@@ -25,4 +25,4 @@
             path.style.strokeDasharray = pathLength + ' ' + pathLength;
         }
     });
-})()
+})();
