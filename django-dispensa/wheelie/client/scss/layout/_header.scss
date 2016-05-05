@@ -80,6 +80,10 @@
 
   &.sticky-header-logo-dispensa63 {
     margin: 0 0 0 5%;
+    
+    @media #{$small} {
+      margin-top: 15px;
+    }
   }
 }
 
