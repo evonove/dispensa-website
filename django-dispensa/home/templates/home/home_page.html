@@ -4,8 +4,8 @@
 
 {% block content %}
 
-{% include 'partials/header.html' with options=settings.options.WebsiteSettings %}
-{% include 'partials/sticky_header.html' with options=settings.options.WebsiteSettings %}
+    {% include 'partials/header.html' with options=settings.options.WebsiteSettings %}
+    {% include 'partials/sticky_header.html' with options=settings.options.WebsiteSettings %}
 
     <section class="splash"></section>
 
@@ -134,7 +134,7 @@
         <div id="map"></div>
     </section>
 
-{% include 'partials/footer.html' with options=settings.options.WebsiteSettings %}
+    {% include 'partials/footer.html' with options=settings.options.WebsiteSettings %}
 
 {% endblock content %}
 
