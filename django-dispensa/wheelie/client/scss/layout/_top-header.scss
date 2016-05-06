@@ -2,6 +2,10 @@
 .error .header {
   height: auto;
   position: relative;
+
+  &.mobile-header.sticky-header {
+    position: fixed;
+  }
 }
 
 .blog .header-logo,
@@ -15,6 +19,11 @@
 .blog .header-navigation,
 .error .header-navigation {
   position: relative;
+
+  // Restore open selector's styles for mobile devices
+  &.mobile-header-navigation-open {
+    top: 0;
+  }
 }
 
 .blog .header-logo-dispensa63,
