@@ -7,10 +7,6 @@
     var stickyNavigation = document.querySelector('.header-navigation.mobile-header-navigation.sticky-header-navigation');
     var stickyNavigationNav = document.querySelector('.header-navigation-nav.mobile-header-navigation-nav.sticky-header-navigation-nav');
 
-    console.log('mobileOpen', mobileOpen);
-    console.log('stickyOpen', stickyOpen);
-
-
     for (var i = 0; i < mobileOpen.length; i++) {
         mobileOpen[i].addEventListener('click', openNavMobile);
     }
