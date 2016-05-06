@@ -16,15 +16,15 @@ if settings.DEBUG:
         url(r'^404/$', TemplateView.as_view(template_name='404.html')),
         url(r'^500/$', TemplateView.as_view(template_name='500.html')),
     ]
-​
+
 urlpatterns += [
     # django
     url(r'^django-admin/', admin.site.urls),
-​
+
     # website
     url(r'^blog/$', TemplateView.as_view(template_name='blog/blog_index.html')),
     url(r'^blog-post/$', TemplateView.as_view(template_name='blog/blog_post.html')),
-​
+
     # wagtail
     url(r'^admin/', include(wagtailadmin_urls)),
     url(r'', include(wagtail_urls)),
