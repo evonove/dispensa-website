@@ -11,22 +11,11 @@
             <div class="blog-tags-search-taglist">
                 <h2>Lista Tag</h2>
                 <ul>
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Dolor Sit</li>
-                    <li>Amet</li>
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Dolor Sit</li>
-                    <li>Amet</li>
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Dolor Sit</li>
-                    <li>Amet</li>
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Dolor Sit</li>
-                    <li>Amet</li>
+                    {% for tag in page.tags %}
+                        <li>
+                            <a href="?tag={{ tag }}">{{ tag }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -38,9 +27,11 @@
                 </div>
                 <p class="blog-tags-search-button-text">Tag</p>
             </div>
-            <div class="blog-tags-search-button-tags_selected">
-                <span>Dolor sit</span>
-            </div>
+            {% if current_tag %}
+                <div class="blog-tags-search-button-tags_selected">
+                    <a href="{% slugurl 'blog' %}"><span>{{ current_tag }}</span></a>
+                </div>
+            {% endif %}
         </div>
     </section>
 
