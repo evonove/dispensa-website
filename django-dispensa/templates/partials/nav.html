@@ -1,7 +1,10 @@
+{% load wagtailcore_tags %}
+
+
 <ul>
-    <li><a href="#">Dispensa 63</a></li>
-    <li><a href="#about">Menù</a></li>
+    <li><a href="/#">Dispensa 63</a></li>
+    <li><a href="/#about">Menù</a></li>
     <li><a href="https://evonove.it/" target="_blank">evonove.it</a></li>
-    <li><a href="#contacts">Contatti</a></li>
-    <li><a href="/blog">Blog</a></li>
+    <li><a href="/#contacts">Contatti</a></li>
+    <li><a href="{% slugurl 'blog' %}">Blog</a></li>
 </ul>
