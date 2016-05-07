@@ -167,6 +167,7 @@ body {
 }
 
 .blog-index-container {
+  align-items: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -187,7 +188,7 @@ body {
   }
 
   @media #{$small} {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0;
