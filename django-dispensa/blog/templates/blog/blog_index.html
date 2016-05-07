@@ -1,4 +1,4 @@
-{% extends "blog_base.html" %}
+{% extends 'blog_base.html' %}
 
 {% load staticfiles %}
 {% load wagtailcore_tags %}
@@ -6,7 +6,6 @@
 
 
 {% block blog_main %}
-
     <section class="blog-tags">
         <div class="blog-tags-search">
             <div class="blog-tags-search-taglist">
@@ -47,59 +46,28 @@
 
     <section class="blog-index">
         <div class="blog-index-container">
-            <article class="blog-index-container-preview">
-                <div class="blog-index-container-preview-post">
-                    <a href="/blog-post"><h2 class="blog-index-container-preview-post-heading">Lorem ipsum dolor sit amet elit!</h2></a>
-                    <p class="blog-index-container-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
-                    <div class="blog-index-container-preview-post-meta">
-                        <div class="blog-index-container-preview-post-meta-date">
-                            <p>6.7.2016</p>
-                        </div>
-                        <div class="blog-index-container-preview-post-meta-tags">
-                            <span class="blog-index-container-preview-post-meta-tags-tag">Lorem</span>
-                            <span class="blog-index-container-preview-post-meta-tags-tag">Ipsum</span>
-                            <span class="blog-index-container-preview-post-meta-tags-tag">Dolor Sit</span>
-                        </div>
-                    </div>
-                </div>
-                <figure class="blog-index-container-preview-pics">
-                    <img class="blog-index-container-preview-pics-pic" src="{% static 'images/blog-placeholder.jpg' %}" alt="placeholder">
-                </figure>
-            </article>
-            <article class="blog-index-container-preview">
-                <div class="blog-index-container-preview-post">
-                    <h2 class="blog-index-container-preview-post-heading">Sed ut condimentum purus.</h2>
-                    <p class="blog-index-container-preview-post-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi.</p>
-                    <div class="blog-index-container-preview-post-meta">
-                        <div class="blog-index-container-preview-post-meta-date">
-                            <p>12.6.2016</p>
-                        </div>
-                        <div class="blog-index-container-preview-post-meta-tags">
-                            <span class="blog-index-container-preview-post-meta-tags-tag">Lorem</span>
+            {% for article in articles %}
+                <article class="blog-index-container-preview">
+                    <div class="blog-index-container-preview-post">
+                        <a href="{% pageurl article %}"><h2 class="blog-index-container-preview-post-heading">{{ article.title }}</h2></a>
+                        <p class="blog-index-container-preview-post-text">{{ article.intro }}</p>
+                        <div class="blog-index-container-preview-post-meta">
+                            <div class="blog-index-container-preview-post-meta-date">
+                                <p>{{ article.date|date:"j.n.Y" }}</p>
+                            </div>
+                            <div class="blog-index-container-preview-post-meta-tags">
+                                {% for tag in article.tags.all %}
+                                    <span class="blog-index-container-preview-post-meta-tags-tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <figure class="blog-index-container-preview-pics">
-                    <img class="blog-index-container-preview-pics-pic" src="{% static 'images/blog-placeholder_2.jpg' %}" alt="placeholder">
-                </figure>
-            </article>
-            <article class="blog-index-container-preview">
-                <div class="blog-index-container-preview-post">
-                    <h2 class="blog-index-container-preview-post-heading">Lorem ipsum dolor sit amet consectetur adipiscing elit.</h2>
-                    <div class="blog-index-container-preview-post-meta">
-                        <div class="blog-index-container-preview-post-meta-date">
-                            <p>26.5.2016</p>
-                        </div>
-                        <div class="blog-index-container-preview-post-meta-tags">
-                            <span class="blog-index-container-preview-post-meta-tags-tag">Ipsum</span>
-                            <span class="blog-index-container-preview-post-meta-tags-tag">Amet</span>
-                        </div>
-                    </div>
-                </div>
-                <figure class="blog-index-container-preview-pics">
-                    <img class="blog-index-container-preview-pics-pic" src="{% static 'images/blog-placeholder.jpg' %}" alt="placeholder">
-                </figure>
-            </article>
+                    <figure class="blog-index-container-preview-pics">
+                        {% image article.cover original as cover %}
+                        <img class="blog-index-container-preview-pics-pic" src="{{ cover.url }}" alt="{{ cover.alt }}">
+                    </figure>
+                </article>
+            {% endfor %}
         </div>
         <div class="blog-index-button">
             Mostra di più

@@ -22,7 +22,6 @@ urlpatterns += [
     url(r'^django-admin/', admin.site.urls),
 
     # website
-    url(r'^blog/$', TemplateView.as_view(template_name='blog/blog_index.html')),
     url(r'^blog-post/$', TemplateView.as_view(template_name='blog/blog_post.html')),
 
     # wagtail

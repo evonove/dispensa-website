@@ -23,7 +23,7 @@ class BlogIndex(Page):
         """
         Returns a queryset of live blog articles, ordered from the most recent
         """
-        articles = Post.objects.live().descendant_of(self)
+        articles = BlogPost.objects.live().descendant_of(self)
         articles = articles.order_by('-date')
 
         return articles
