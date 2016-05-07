@@ -12,17 +12,23 @@
             {% if child.value.attribution %}<span>- {{ child.value.attribution }}</span>{% endif %}
         </blockquote>
     {% elif child.block_type == 'paragraph' %}
-        {{ child.value|richtext }}
+        <div class="blog-post-paragraph">
+            {{ child.value|richtext }}</p>
+        </div>
     {% elif child.block_type == 'aligned_image' %}
-        <figure class="article-picture">
-            {% image child.value.image original as image %}
-            <img src="{{ image.url }}" class="article-picture-img {{ child.value.alignment }}" alt="{{ image.alt }}" />
-
-            {% if child.value.caption %}
-                <div class="caption">
-                    {{ child.value.caption|richtext }}
+        {% image child.value.image original as image %}
+        <figure class="blog-post-pics">
+            <div class="blog-post-pics-container">
+                <div class="blog-post-pics-container-pic">
+                    <img src="{{ image.url }}" alt="{{ image.alt }}">
                 </div>
-            {% endif %}
+
+                {% if child.value.caption %}
+                    <div class="caption">
+                        {{ child.value.caption|richtext }}
+                    </div>
+                {% endif %}
+            </div>
         </figure>
     {% else %}
         {{ child }}

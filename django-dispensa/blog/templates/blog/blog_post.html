@@ -1,94 +1,23 @@
-{% extends "blog_base.html" %}
+{% extends 'blog_base.html' %}
 
 {% load static from staticfiles %}
 {% load wagtailcore_tags %}
 {% load wagtailimages_tags %}
 
-{% block blog_main %}
 
+{% block blog_main %}
     <section class="blog-post">
-        <h1>Lorem ipsum dolor sit amet elit!</h1>
-        <p>01 Aprile 2016</p>
-        <div class="blog-post-paragraph">
-            <p class="blog-post-paragraph-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi. Suspendisse commodo congue pulvinar. Etiam rutrum tristique est, non egestas mi elementum vitae. Phasellus tincidunt ultricies dui a euismod. Sed auctor vehicula quam, in interdum augue congue sed. Suspendisse nec lacinia ex. Nullam in sapien quis leo pellentesque viverra. Praesent id urna felis. Morbi luctus vulputate orci vel porttitor. Aliquam est mi, tempor eget orci a, commodo sagittis sem.</p>
-        </div>
-        <figure class="blog-post-pics">
-            <div class="blog-post-pics-container one_pic">
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-            </div>
-        </figure>
-        <div class="blog-post-paragraph">
-            <p class="blog-post-paragraph-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi. Suspendisse commodo congue pulvinar. Etiam rutrum tristique est, non egestas mi elementum vitae. Phasellus tincidunt ultricies dui a euismod. Sed auctor vehicula quam, in interdum augue congue sed. Suspendisse nec lacinia ex. Nullam in sapien quis leo pellentesque viverra. Praesent id urna felis. Morbi luctus vulputate orci vel porttitor. Aliquam est mi, tempor eget orci a, commodo sagittis sem.</p>
-            <p class="blog-post-paragraph-text">Cras mi nisi, consectetur eu odio ut, fermentum ullamcorper odio. Nunc feugiat gravida suscipit. In ut urna sit amet elit ultricies faucibus ac sed dolor. Praesent mi eros, maximus sodales rhoncus in, tristique quis arcu. Aliquam fringilla augue arcu, vitae fermentum ante auctor id. Aenean suscipit urna vel tortor cursus eleifend. Pellentesque sodales semper ultrices. Praesent feugiat nec metus quis sodales. Ut non dignissim urna, id ullamcorper arcu. Vestibulum eleifend cursus odio, posuere faucibus quam suscipit ut. Aenean porttitor metus ut ex viverra semper.</p>
-        </div>
-        <figure class="blog-post-pics">
-            <div class="blog-post-pics-container two_pics">
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-            </div>
-        </figure>
-        <div class="blog-post-paragraph">
-            <p class="blog-post-paragraph-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi. Suspendisse commodo congue pulvinar. Etiam rutrum tristique est, non egestas mi elementum vitae. Phasellus tincidunt ultricies dui a euismod. Sed auctor vehicula quam, in interdum augue congue sed. Suspendisse nec lacinia ex. Nullam in sapien quis leo pellentesque viverra. Praesent id urna felis. Morbi luctus vulputate orci vel porttitor. Aliquam est mi, tempor eget orci a, commodo sagittis sem.</p>
-        </div>
-        <figure class="blog-post-pics">
-            <div class="blog-post-pics-container three_pics">
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-            </div>
-        </figure>
-        <div class="blog-post-paragraph">
-            <p class="blog-post-paragraph-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi. Suspendisse commodo congue pulvinar. Etiam rutrum tristique est, non egestas mi elementum vitae. Phasellus tincidunt ultricies dui a euismod. Sed auctor vehicula quam, in interdum augue congue sed. Suspendisse nec lacinia ex. Nullam in sapien quis leo pellentesque viverra. Praesent id urna felis. Morbi luctus vulputate orci vel porttitor. Aliquam est mi, tempor eget orci a, commodo sagittis sem.</p>
-            <p class="blog-post-paragraph-text">Cras mi nisi, consectetur eu odio ut, fermentum ullamcorper odio. Nunc feugiat gravida suscipit. In ut urna sit amet elit ultricies faucibus ac sed dolor. Praesent mi eros, maximus sodales rhoncus in, tristique quis arcu. Aliquam fringilla augue arcu, vitae fermentum ante auctor id. Aenean suscipit urna vel tortor cursus eleifend. Pellentesque sodales semper ultrices. Praesent feugiat nec metus quis sodales. Ut non dignissim urna, id ullamcorper arcu. Vestibulum eleifend cursus odio, posuere faucibus quam suscipit ut. Aenean porttitor metus ut ex viverra semper.</p>
-        </div>
-        <figure class="blog-post-pics">
-            <div class="blog-post-pics-container one_pic">
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-            </div>
-            <div class="blog-post-pics-container two_pics">
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-            </div>
-            <div class="blog-post-pics-container three_pics">
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-                <div class="blog-post-pics-container-pic">
-                    <img src="{% static 'images/blog-placeholder.webp' %}">
-                </div>
-            </div>
-        </figure>
-        <div class="blog-post-paragraph">
-            <p class="blog-post-paragraph-text">Quisque pharetra feugiat pharetra. Etiam quis felis blandit, vulputate tortor ut, dapibus mi. Suspendisse commodo congue pulvinar. Etiam rutrum tristique est, non egestas mi elementum vitae. Phasellus tincidunt ultricies dui a euismod. Sed auctor vehicula quam, in interdum augue congue sed. Suspendisse nec lacinia ex. Nullam in sapien quis leo pellentesque viverra. Praesent id urna felis. Morbi luctus vulputate orci vel porttitor. Aliquam est mi, tempor eget orci a, commodo sagittis sem.</p>
-        </div>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date|date:'d F Y' }}</p>
+
+        {% include "partials/streamfield.html" with content=self.body %}
+
         <div class="blog-post-social">
             <h3 class="blog-post-social-heading">Condividi</h3>
             <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/facebook.svg' %}"></a>
             <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/instagram.svg' %}"></a>
             <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/pinterest.svg' %}"></a>
         </div>
-        <div class="blog-post-back"><span>< </span>Torna all'indice</div>
+        <div class="blog-post-back"><a href="{% slugurl 'blog' %}"><span>&lt; </span>Torna all'indice</a></div>
     </section>
-
 {% endblock blog_main %}

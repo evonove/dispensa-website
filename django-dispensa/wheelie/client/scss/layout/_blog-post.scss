@@ -18,7 +18,7 @@
   }
 }
 
-.blog-post-paragraph-text {
+.blog-post-paragraph > .rich-text {
   font: 0.5em Lato, sans-serif;
   line-height: 1.5em;
   margin-top: 0.5em;
@@ -30,10 +30,6 @@
 
   @media #{$small} {
     flex-direction: column;
-  }
-
-  &.one_pic > * {
-    width: 100%;
   }
 
   &.two_pics > * {
