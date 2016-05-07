@@ -61,6 +61,7 @@ INSTALLED_APPS = (
     'wheelie',
     'options',
     'home',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = [
