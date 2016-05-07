@@ -13,6 +13,7 @@ Once the database is up and running, launch the following commands::
 
     $ python manage.py migrate
     $ python manage.py createsuperuser
+    $ python manage.py create_blog_page
     $ python manage.py runserver
 
 Notes on docker-compose
