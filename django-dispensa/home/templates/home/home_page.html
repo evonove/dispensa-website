@@ -2,10 +2,10 @@
 
 {% load staticfiles %}
 
-{% block content %}
 
-    {% include 'partials/header.html' with options=settings.options.WebsiteSettings %}
-    {% include 'partials/sticky_header.html' with options=settings.options.WebsiteSettings %}
+{% block content %}
+    {% include 'partials/header.html' %}
+    {% include 'partials/sticky_header.html' %}
 
     <section class="splash"></section>
 
@@ -119,22 +119,23 @@
             <div class="contacts-container-touch">
                 <h2>Contattaci</h2>
                 <div class="contacts-container-touch-details">
-                    <p>+39 075 1234567</p>
+                    <p>{{settings.options.WebsiteSettings.phone}}</p>
+                    <p>{{settings.options.WebsiteSettings.email}}</p>
                 </div>
             </div>
             <div class="contacts-container-social">
                 <h2>Social</h2>
                 <div class="contacts-container-social-details">
-                    <a href="#"><p>Facebook</p></a>
-                    <a href="#"><p>Instagram</p></a>
-                    <a href="#"><p>Pinterest</p></a>
+                    <a href="{{settings.options.WebsiteSettings.facebook}}"><p>Facebook</p></a>
+                    <a href="{{settings.options.WebsiteSettings.instagram}}"><p>Instagram</p></a>
+                    <a href="{{settings.options.WebsiteSettings.pinterest}}"><p>Pinterest</p></a>
                 </div>
             </div>
         </div>
         <div id="map"></div>
     </section>
 
-    {% include 'partials/footer.html' with options=settings.options.WebsiteSettings %}
+    {% include 'partials/footer.html' %}
 
 {% endblock content %}
 

@@ -1,0 +1,36 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+
+{% for child in content %}
+    {% if child.block_type == 'h2' %}
+        <h2 class="article-title">{{ child }}</h2>
+    {% elif child.block_type == 'h3' %}
+        <h3 class="article-subtitle">{{ child }}</h3>
+    {% elif child.block_type == 'pullquote' %}
+        <blockquote>
+            {{ child.value.quote }}
+            {% if child.value.attribution %}<span>- {{ child.value.attribution }}</span>{% endif %}
+        </blockquote>
+    {% elif child.block_type == 'paragraph' %}
+        <div class="blog-post-paragraph">
+            {{ child.value|richtext }}</p>
+        </div>
+    {% elif child.block_type == 'aligned_image' %}
+        {% image child.value.image original as image %}
+        <figure class="blog-post-pics">
+            <div class="blog-post-pics-container">
+                <div class="blog-post-pics-container-pic">
+                    <img src="{{ image.url }}" alt="{{ image.alt }}">
+                </div>
+
+                {% if child.value.caption %}
+                    <div class="caption">
+                        {{ child.value.caption|richtext }}
+                    </div>
+                {% endif %}
+            </div>
+        </figure>
+    {% else %}
+        {{ child }}
+    {% endif %}
+{% endfor %}

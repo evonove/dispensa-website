@@ -1,17 +1,20 @@
 (function() {
+    var bodyTag = document.querySelector('body');
     var tagButtonContainer = document.querySelector('.blog-tags-search-button');
     var tagButton = document.querySelector('.blog-tags-search-button-container');
     var tagContainer = document.querySelector('.blog-tags-search');
-    var bodyTag = document.getElementsByTagName('body')[0];
-    var iconSwitch = document.querySelector('.blog-tags-search-button-container-icon');
     var tagSelected = document.querySelector('.blog-tags-search-button-tags_selected');
+    var iconSwitch = document.querySelector('.blog-tags-search-button-container-icon');
 
     if (!tagButton) {
         return;
     }
 
     var tagWidth = tagButton.offsetWidth + 'px';
-    tagSelected.style.width = tagWidth;
+
+    if (tagSelected) {
+        tagSelected.style.width = tagWidth;
+    }
 
     tagButton.addEventListener('click', tagEvent);
 

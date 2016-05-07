@@ -1,0 +1,23 @@
+{% extends 'blog_base.html' %}
+
+{% load static from staticfiles %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+
+{% block blog_main %}
+    <section class="blog-post">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date|date:'d F Y' }}</p>
+
+        {% include "partials/streamfield.html" with content=self.body %}
+
+        <div class="blog-post-social">
+            <h3 class="blog-post-social-heading">Condividi</h3>
+            <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/facebook.svg' %}"></a>
+            <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/instagram.svg' %}"></a>
+            <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/pinterest.svg' %}"></a>
+        </div>
+        <div class="blog-post-back"><a href="{% slugurl 'blog' %}"><span>&lt; </span>Torna all'indice</a></div>
+    </section>
+{% endblock blog_main %}

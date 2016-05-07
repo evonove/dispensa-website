@@ -1,0 +1,68 @@
+{% extends 'blog_base.html' %}
+
+{% load staticfiles %}
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+
+{% block blog_main %}
+    <section class="blog-tags">
+        <div class="blog-tags-search">
+            <div class="blog-tags-search-taglist">
+                <h2>Lista Tag</h2>
+                <ul>
+                    {% for tag in page.tags %}
+                        <li>
+                            <a href="?tag={{ tag }}">{{ tag }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="blog-tags-search-button">
+            <div class="blog-tags-search-button-container">
+                <div class="blog-tags-search-button-container-icon">
+                    <div class="blog-tags-search-button-container-icon-open"></div>
+                    <div class="blog-tags-search-button-container-icon-close"></div>
+                </div>
+                <p class="blog-tags-search-button-text">Tag</p>
+            </div>
+            {% if current_tag %}
+                <div class="blog-tags-search-button-tags_selected">
+                    <a href="{% slugurl 'blog' %}"><span>{{ current_tag }}</span></a>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="blog-index">
+        <div class="blog-index-container">
+            {% for article in articles %}
+                <article class="blog-index-container-preview">
+                    <div class="blog-index-container-preview-post">
+                        <a href="{% pageurl article %}"><h2 class="blog-index-container-preview-post-heading">{{ article.title }}</h2></a>
+                        <p class="blog-index-container-preview-post-text">{{ article.intro }}</p>
+                        <div class="blog-index-container-preview-post-meta">
+                            <div class="blog-index-container-preview-post-meta-date">
+                                <p>{{ article.date|date:"j.n.Y" }}</p>
+                            </div>
+                            <div class="blog-index-container-preview-post-meta-tags">
+                                {% for tag in article.tags.all %}
+                                    <span class="blog-index-container-preview-post-meta-tags-tag">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="blog-index-container-preview-pics">
+                        {% image article.cover original as cover %}
+                        <img class="blog-index-container-preview-pics-pic" src="{{ cover.url }}" alt="{{ cover.alt }}">
+                    </figure>
+                </article>
+            {% endfor %}
+        </div>
+        <div class="blog-index-button">
+            Mostra di più
+        </div>
+    </section>
+
+{% endblock blog_main %}
