@@ -30,6 +30,10 @@
 .contacts-container-social-details {
   display: flex;
   justify-content: space-around;
+
+  @media #{$small} {
+    flex-direction: column;
+  }
 }
 
 #map {
