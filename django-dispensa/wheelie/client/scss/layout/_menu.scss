@@ -10,6 +10,25 @@
   left: calc(50% - 400px);
   position: absolute;
   top: 215px;
+
+  @media #{$small}, #{$medium} {
+    left: calc(50% - 330px);
+    top: 185px;
+  }
+}
+
+.menu-path-svg {
+  @media #{$small}, #{$medium} {
+    display: none;
+  }
+}
+
+.menu-path-svg-tablet {
+  display: none;
+
+  @media #{$medium} {
+    display: block;
+  }
 }
 
 #menu-path-dashed {
@@ -19,6 +38,11 @@
 .menu-heading {
   margin-right: 15%;
   text-align: right;
+
+  @media #{$small}, #{$medium} {
+    margin-right: 0;
+    text-align: center;
+  }
 }
 
 .menu-ingredients,
@@ -29,37 +53,38 @@
   margin: 7.5em auto 0;
   position: relative;
   width: 100%;
+
+  @media #{$small}, #{$medium} {
+    flex-direction: column;
+    margin-top: 3.5em;
+  }
+
+  @media #{$small} {
+    margin-top: 1.75em;
+  }
 }
 
 .menu-ingredients {
   height: 550px;
+
+  @media #{$small}, #{$medium} {
+    height: auto;
+  }
 }
 
 .menu-preparation {
   height: 750px;
   justify-content: flex-end;
   margin-top: 3em;
-}
 
-.menu-ingredients-figure,
-.menu-preparation-figure {
-  img {
-    width: 100%;
+  @media #{$medium} {
+    margin-top: 0;
   }
-}
 
-.menu-ingredients-figure {
-  left: calc(50% - 85px);
-  position: absolute;
-  top: -250px;
-  width: 1001px;
-}
-
-.menu-preparation-figure {
-  left: calc(50% - 975px);
-  position: absolute;
-  top: -25px;
-  width: 1038px;
+  @media #{$small} {
+    height: auto;
+    margin-top: 1.5em;
+  }
 }
 
 .menu-ingredients-description,
@@ -68,6 +93,61 @@
   font: 1.25em Journal, serif;
   margin-left: 7%;
   width: 31%;
+
+  @media #{$small}, #{$medium} {
+    margin-left: 0;
+    order: 2;
+    text-align: center;
+    width: 500px;
+  }
+
+  @media #{$small} {
+    width: 300px;
+  }
+}
+
+.menu-ingredients-figure {
+  left: calc(50% - 85px);
+  position: absolute;
+  top: -250px;
+  width: 1001px;
+
+  @media #{$medium} {
+    width: calc(1001px / 1.75);
+  }
+
+  @media #{$small} {
+    width: calc(1001px / 3);
+  }
+}
+
+.menu-preparation-figure {
+  left: calc(50% - 975px);
+  position: absolute;
+  top: -25px;
+  width: 1038px;
+
+  @media #{$medium} {
+    width: calc(1038px / 1.75);
+  }
+
+  @media #{$small} {
+    width: calc(1038px / 3);
+  }
+}
+
+.menu-ingredients-figure,
+.menu-preparation-figure {
+  img {
+    width: 100%;
+  }
+
+  @media #{$small}, #{$medium} {
+    order: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 
 .menu-courses {
@@ -75,6 +155,14 @@
   margin: 5em auto 0;
   position: relative;
   width: 100%;
+
+  @media #{$medium} {
+    height: 3200px;
+  }
+
+  @media #{$small} {
+    height: 2300px;
+  }
 
   figure {
     position: absolute;
@@ -92,18 +180,32 @@
 .menu-courses-description {
   margin: auto;
   width: 100%;
+
+  @media #{$small} {
+    width: 300px;
+  }
 }
 
 .menu-courses-description-top {
-  left: -150px;
+  left: -75px;
   position: relative;
   top: -25px;
+
+  @media #{$small}, #{$medium} {
+    left: 0;
+    top: 0;
+  }
 }
 
 .menu-courses-description-bottom {
-  left: 30px;
+  left: 75px;
   position: relative;
   top: -5px;
+
+  @media #{$small}, #{$medium} {
+    left: 0;
+    top: 0;
+  }
 }
 
 .menu-ingredients-canvas,
@@ -121,6 +223,10 @@
   margin: auto;
   position: relative;
   width: 300px;
+
+  @media #{$small}, #{$medium} {
+    width: 250px;
+  }
 }
 
 .menu-courses-canvas-breakfast-doodle,
@@ -139,20 +245,53 @@
 }
 
 .menu-courses-canvas-breakfast {
-  left: 150px;
-  top: 300px;
+  left: 50px;
+  top: 200px;
+
+  @media #{$medium} {
+    left: 30px;
+    top: 175px;
+  }
+
+  @media #{$small} {
+    left: 0;
+    top: 100px;
+  }
 }
 
 .menu-courses-canvas-the {
   left: calc(50% - 900px);
-  width: 750px;
   top: 0;
+
+  @media #{$medium} {
+    left: calc(50% - 400px);
+    top: 300px;
+    width: calc(750px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 220px);
+    top: 290px;
+    width: calc(750px / 3);
+  }
 }
 
 .menu-courses-canvas-danish {
   left: calc(50% + 350px);
   top: 100px;
   width: 300px;
+
+  @media #{$medium} {
+    left: calc(50% + 150px);
+    top: 400px;
+    width: calc(300px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% + 25px);
+    top: 250px;
+    width: calc(300px / 3);
+  }
 }
 
 .menu-courses-canvas-croissant {
@@ -160,23 +299,56 @@
   &-second,
   &-third {
     width: 200px;
+
+    @media #{$medium} {
+      width: calc(200px / 1.75);
+    }
+
+    @media #{$small} {
+      width: calc(200px / 3);
+    }
   }
 
   &-first {
     left: calc(50% - 750px);
     top: 700px;
+
+    @media #{$medium} {
+      left: calc(50% - 250px);
+      top: 950px;
+    }
+
+    @media #{$small} {
+      left: calc(50% - 175px);
+      top: 525px;
+    }
   }
 
   &-second {
     left: calc(50% - 1050px);
     top: 525px;
     transform: rotate(30deg);
+
+    @media #{$medium} {
+      left: calc(50% - 375px);
+      top: 850px;
+      transform: rotate(15deg);
+    }
+
+    @media #{$small} {
+      left: calc(50% - 160px);
+      top: 650px;
+    }
   }
 
   &-third {
     left: calc(50% + 850px);
     top: 700px;
     transform: rotate(25deg);
+
+    @media #{$medium} {
+      display: none;
+    }
   }
 }
 
@@ -184,50 +356,154 @@
   left: calc(50% - 320px);
   top: 655px;
   width: 200px;
+
+  @media #{$medium} {
+    left: calc(50% - 205px);
+    top: 660px;
+    width: calc(200px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 40px);
+    top: 500px;
+    width: calc(200px / 3);
+  }
 }
 
 .menu-courses-canvas-yogurt {
   left: calc(50% + 200px);
-  top: 550px;
+  top: 745px;
   width: 550px;
+
+  @media #{$medium} {
+    left: calc(50% + 15px);
+    top: 680px;
+    width: calc(550px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 50px);
+    top: 600px;
+    width: calc(550px / 3);
+  }
 }
 
 .menu-courses-canvas-lunch {
   left: -75px;
   top: 1200px;
+
+  @media #{$medium} {
+    left: 125px;
+    top: 1000px;
+  }
+
+  @media #{$small} {
+    left: 0px;
+    top: 700px;
+  }
 }
 
 .menu-courses-canvas-salad {
   left: calc(50% - 850px);
   top: 1200px;
   width: 490px;
+
+  @media #{$medium} {
+    left: calc(50% - 375px);
+    top: 1250px;
+    width: calc(490px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 225px);
+    top: 1115px;
+    width: calc(490px / 3);
+  }
 }
 
 .menu-courses-canvas-coffee {
   left: calc(50% - 750px);
   top: 2100px;
   width: 500px;
+
+  @media #{$medium} {
+    left: calc(50% - 350px);
+    top: 1650px;
+    width: calc(500px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 200px);
+    top: 1400px;
+    width: calc(500px / 3);
+  }
 }
 
 .menu-courses-canvas-sandwich {
   left: calc(50% + 100px);
   top: 1400px;
   width: 680px;
+
+  @media #{$medium} {
+    left: calc(50% - 50px);
+    top: 1450px;
+    width: calc(680px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 75px);
+    top: 1025px;
+    width: calc(680px / 3);
+  }
 }
 
 .menu-courses-canvas-aperitif {
   left: 50px;
   top: 2125px;
+
+  @media #{$medium} {
+    left: -200px;
+    top: 1700px;
+  }
+
+  @media #{$small} {
+    left: 0;
+    top: 1200px;
+  }
 }
 
 .menu-courses-canvas-croutons {
   left: calc(50% - 1250px);
   top: 2550px;
   width: 1000px;
+
+  @media #{$medium} {
+    left: calc(50% - 260px);
+    top: 2200px;
+    width: calc(1000px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 200px);
+    top: 1700px;
+    width: calc(1000px / 3);
+  }
 }
 
 .menu-courses-canvas-cocktail {
   left: calc(50% + 110px);
   top: 2710px;
   width: 600px;
+
+  @media #{$medium} {
+    left: calc(50% - 170px);
+    top: 2725px;
+    width: calc(600px / 1.75);
+  }
+
+  @media #{$small} {
+    left: calc(50% - 125px);
+    top: 2000px;
+    width: calc(600px / 3);
+  }
 }
