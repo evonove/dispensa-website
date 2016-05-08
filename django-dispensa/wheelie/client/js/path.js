@@ -14,7 +14,7 @@
 
     window.addEventListener("scroll", function() {
 
-        var scrollPercentage = (document.body.scrollTop - referenceTop) / ((menuHeight - document.documentElement.clientHeight) + 450);
+        var scrollPercentage = ((window.pageYOffset || document.documentElement.scrollTop) - referenceTop) / ((menuHeight - document.documentElement.clientHeight) + 450);
         var drawLength = (pathLength * scrollPercentage);
 
         path.style.strokeDashoffset = pathLength - drawLength;
