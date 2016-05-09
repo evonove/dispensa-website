@@ -11,4 +11,8 @@
   .no-webp & {
     background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
   }
+
+  @media #{$small}, #{$medium} {
+    background-attachment: scroll !important;
+  }
 }

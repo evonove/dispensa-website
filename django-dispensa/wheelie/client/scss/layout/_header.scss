@@ -242,8 +242,20 @@
     background: url("/static/images/splash.jpg") center / cover no-repeat fixed;
   }
 
+  @media #{$medium} {
+    height: 135px;
+  }
+
   @media #{$small} {
     top: -100px;
+  }
+
+  @media #{$small}, #{$medium} {
+    background-attachment: scroll !important;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-48%);
   }
 
   &.sticky-header-navigation-blur {
