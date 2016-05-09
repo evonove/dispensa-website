@@ -15,3 +15,25 @@
         {% include 'partials/footer.html' with options=settings.options.WebsiteSettings %}
     </div>
 {% endblock content %}
+
+{% block extra_js %}
+    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1729208614024658',
+                xfbml      : true,
+                version    : 'v2.6'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% endblock extra_js %}

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.sites.shortcuts import get_current_site
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.utils.translation import ugettext as _
 
@@ -99,6 +100,14 @@ class BlogPost(Page):
         StreamFieldPanel('body'),
         FieldPanel('date'),
     ]
+
+    def get_context(self, request):
+        """
+        Provides the site setting used by the Sharing Buttons
+        """
+        context = super().get_context(request)
+        context['site_domain'] = request.build_absolute_uri()
+        return context
 
 
 @register_setting

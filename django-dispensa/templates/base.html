@@ -29,6 +29,10 @@
         <meta name="msapplication-TileImage" content="{% static 'mstile-144x144.png' %}">
         <meta name="theme-color" content="#ffffff">
 
+        {# Facebook Open Graph #}
+        {% block open_graph %}
+        {% endblock %}
+
         {# Global stylesheets #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 

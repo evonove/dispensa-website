@@ -19,6 +19,7 @@ var scripts = [
     'nav.js',
     'map.js',
     'path.js',
+    'share.js',
     'sticky.js',
     'tags.js'
 ];

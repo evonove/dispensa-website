@@ -20,10 +20,18 @@
 
         <div class="blog-post-social">
             <h3 class="blog-post-social-heading">Condividi</h3>
-            <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/facebook.svg' %}"></a>
-            <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/instagram.svg' %}"></a>
-            <a href="#"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/pinterest.svg' %}"></a>
+            <a href="#" class="js-facebook-share"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/facebook.svg' %}"></a>
+            <a data-pin-custom="true" href="https://www.pinterest.com/pin/create/button/"><img class="blog-post-social-icon js-inject-svg" src="{% static 'svg/pinterest.svg' %}" /></a>
         </div>
         <div class="blog-post-back"><a href="{% slugurl 'blog' %}"><span>&lt; </span>Torna all'indice</a></div>
     </section>
 {% endblock blog_main %}
+
+{% block open_graph %}
+    {% image page.cover original as cover %}
+    <meta property="og:url" content="{{site_domain}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dispensa 63" />
+    <meta property="og:description" content="{{page.intro}}" />
+    <meta property="og:image" content="{{cover.url}}" />
+{% endblock open_graph %}
