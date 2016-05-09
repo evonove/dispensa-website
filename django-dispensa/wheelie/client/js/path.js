@@ -12,9 +12,11 @@
 
     path.style.strokeDashoffset = pathLength;
 
+    var k = window.devicePixelRatio > 1 ? -400 : 450;
+
     window.addEventListener("scroll", function() {
 
-        var scrollPercentage = (window.pageYOffset - referenceTop) / ((menuHeight - window.innerHeight) + 450);
+        var scrollPercentage = (window.pageYOffset - referenceTop) / ((menuHeight - window.innerHeight) + k);
         var drawLength = (pathLength * scrollPercentage);
 
         path.style.strokeDashoffset = pathLength - drawLength;
