@@ -45,6 +45,11 @@
   width: 100%;
   z-index: $z-logo;
 
+  // Nav refactoring is required to remove the media-query below
+  @media only screen and (min-width: 1025px) and (max-width: 1350px) {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
   &.mobile-header-logo {
     background: none;
     left: 0;
@@ -123,6 +128,12 @@
   position: absolute;
   top: 0;
   width: 100%;
+
+  // Nav refactoring is required to remove the media-query below
+  @media #{$large} {
+    height: 125px;
+  }
+
 
   &.mobile-header-navigation {
     bottom: 0;
