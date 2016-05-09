@@ -1,5 +1,5 @@
 (function() {
-    var path = document.getElementById('menu-path-line');
+    var path = document.querySelector('#menu-path-line');
     var menu = document.querySelector('.menu');
 
     if (!path || !menu) {
@@ -14,7 +14,7 @@
 
     window.addEventListener("scroll", function() {
 
-        var scrollPercentage = ((window.pageYOffset || document.documentElement.scrollTop) - referenceTop) / ((menuHeight - document.documentElement.clientHeight) + 450);
+        var scrollPercentage = (window.pageYOffset - referenceTop) / ((menuHeight - window.innerHeight) + 450);
         var drawLength = (pathLength * scrollPercentage);
 
         path.style.strokeDashoffset = pathLength - drawLength;
