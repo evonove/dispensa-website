@@ -2,7 +2,7 @@ body {
   font: 48px 'Amatic SC', serif;
   line-height: 1.618em;
 
-  @media #{$small}, #{$medium} {
+  @media #{$small}, #{$medium}, #{$large} {
     font-size: 36px;
   }
 }
