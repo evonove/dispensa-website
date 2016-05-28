@@ -8,6 +8,8 @@ from django.views.generic import TemplateView
 from wagtail.wagtailadmin import urls as wagtailadmin_urls
 from wagtail.wagtailcore import urls as wagtail_urls
 
+from wagtail.contrib.wagtailsitemaps.views import sitemap
+
 
 urlpatterns = []
 
@@ -26,5 +28,6 @@ urlpatterns += [
 
     # wagtail
     url(r'^admin/', include(wagtailadmin_urls)),
+    url('^sitemap\.xml$', sitemap),
     url(r'', include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

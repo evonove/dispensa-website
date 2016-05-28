@@ -54,6 +54,7 @@ INSTALLED_APPS = (
     'wagtail.wagtailadmin',
     'wagtail.wagtailcore',
     'wagtail.contrib.settings',
+    'wagtail.contrib.wagtailsitemaps',
 
     'modelcluster',
     'taggit',
