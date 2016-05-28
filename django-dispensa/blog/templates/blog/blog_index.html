@@ -60,9 +60,11 @@
                 </article>
             {% endfor %}
         </div>
-        <div class="blog-index-button">
-            Mostra di più
-        </div>
+        {% if not articles %}
+            <div class="blog-index-button">
+                Nessun post disponibile!
+            </div>
+        {% endif %}
     </section>
 
 {% endblock blog_main %}
