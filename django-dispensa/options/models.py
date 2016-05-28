@@ -35,3 +35,8 @@ class WebsiteSettings(BaseSetting):
             classname='collapsible',
         ),
     ]
+
+
+@register_setting
+class AnalyticsSettings(BaseSetting):
+    google_analytics = models.CharField(max_length=15, help_text=_('Google Analytics tracking ID'))
