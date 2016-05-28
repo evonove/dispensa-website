@@ -39,4 +39,14 @@ class WebsiteSettings(BaseSetting):
 
 @register_setting
 class AnalyticsSettings(BaseSetting):
-    google_analytics = models.CharField(max_length=15, help_text=_('Google Analytics tracking ID'))
+    google_analytics = models.CharField(null=True, blank=True, max_length=15, help_text=_('Google Analytics tracking ID'))
+
+    panels = [
+        MultiFieldPanel(
+            [
+                FieldPanel('google_analytics'),
+            ],
+            heading=_('Tracking'),
+            classname='collapsible',
+        ),
+    ]
